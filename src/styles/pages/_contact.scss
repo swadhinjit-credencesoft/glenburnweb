@@ -1,0 +1,38 @@
+.cgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0;
+  border: 1px solid var(--line);
+  background: var(--chalk);
+
+  > div {
+    padding: 22px;
+    border-right: 1px solid var(--line);
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  h4 {
+    font-family: var(--font-plexmono), monospace;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 12px;
+  }
+
+  p {
+    font-size: 14.5px;
+    line-height: 1.75;
+  }
+}
+
+.hourrow {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-plexmono), monospace;
+  font-size: 12.5px;
+  padding: 3px 0;
+}

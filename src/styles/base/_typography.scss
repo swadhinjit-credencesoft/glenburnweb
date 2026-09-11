@@ -1,0 +1,13 @@
+.mono {
+  font-family: var(--font-plexmono), monospace;
+  letter-spacing: 0.02em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-archivo), sans-serif;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}

@@ -1,0 +1,84 @@
+.conf {
+  padding: 52px 0;
+  text-align: center;
+}
+
+.conftick {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--green);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 20px;
+  color: #fff;
+  font-size: 34px;
+}
+
+.conf h1 {
+  font-size: clamp(28px, 4.6vw, 44px);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.conf .ref {
+  font-family: var(--font-plexmono), monospace;
+  font-size: 13.5px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  margin-top: 11px;
+}
+
+.confcard {
+  background: var(--chalk);
+  border: 2px solid var(--deep);
+  max-width: 610px;
+  margin: 28px auto 0;
+  text-align: left;
+
+  .ch {
+    background: var(--deep);
+    color: var(--chalk);
+    padding: 16px 22px;
+
+    .k {
+      font-family: var(--font-plexmono), monospace;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber);
+    }
+
+    .v {
+      font-family: var(--font-archivo), sans-serif;
+      font-weight: 900;
+      font-size: 23px;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+  }
+}
+
+.confrow {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 13px 22px;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+
+  &:last-child {
+    border: none;
+  }
+
+  .k {
+    color: var(--muted);
+  }
+
+  .v {
+    font-family: var(--font-plexmono), monospace;
+    font-size: 13px;
+    text-align: right;
+    font-weight: 500;
+  }
+}

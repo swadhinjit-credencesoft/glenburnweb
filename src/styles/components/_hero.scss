@@ -1,0 +1,107 @@
+.phero {
+  position: relative;
+  color: var(--chalk);
+  overflow: hidden;
+
+  .bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center 58%;
+    filter: saturate(1.02) contrast(1.04);
+  }
+
+  .veil {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      100deg,
+      rgba(11, 43, 69, 0.95) 0%,
+      rgba(11, 43, 69, 0.88) 34%,
+      rgba(11, 43, 69, 0.52) 66%,
+      rgba(11, 43, 69, 0.22) 100%
+    );
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 2;
+    padding-top: 52px;
+    padding-bottom: 0;
+  }
+}
+
+.eyebrow {
+  font-family: var(--font-plexmono), monospace;
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+
+.phero h1 {
+  font-size: clamp(31px, 4.5vw, 50px);
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 14px 0 0;
+  max-width: 21ch;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+
+  em {
+    font-style: normal;
+    color: var(--amber);
+  }
+}
+
+.phero .sub {
+  margin-top: 16px;
+  font-size: 17.5px;
+  font-weight: 300;
+  color: #d3dce3;
+  max-width: 50ch;
+}
+
+.hctas {
+  display: flex;
+  gap: 11px;
+  flex-wrap: wrap;
+  margin-top: 26px;
+}
+
+.badges {
+  display: flex;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.badge2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 9px 14px;
+  backdrop-filter: blur(3px);
+
+  b {
+    font-family: var(--font-archivo), sans-serif;
+    font-weight: 800;
+    font-size: 13px;
+    color: var(--chalk);
+  }
+
+  span {
+    font-size: 12px;
+    color: #b9c6d2;
+  }
+}
+
+.dotA {
+  width: 7px;
+  height: 7px;
+  background: var(--amber);
+  border-radius: 50%;
+  flex: 0 0 auto;
+}

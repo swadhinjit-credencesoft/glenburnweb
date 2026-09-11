@@ -1,0 +1,41 @@
+footer.site {
+  background: var(--deep);
+  color: #9fb2c2;
+  padding: 42px 0 20px;
+  font-size: 13.5px;
+
+  .cols {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+    gap: 24px;
+    margin-bottom: 26px;
+  }
+
+  h4 {
+    font-family: var(--font-plexmono), monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 11px;
+    font-weight: 600;
+  }
+
+  a {
+    display: block;
+    color: #9fb2c2;
+    text-decoration: none;
+    padding: 3px 0;
+    font-size: 13.5px;
+  }
+
+  .bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+    padding-top: 15px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+}

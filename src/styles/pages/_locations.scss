@@ -1,0 +1,27 @@
+.loccard {
+  background: var(--chalk);
+  border: 1px solid var(--line);
+  padding: 20px;
+  border-top: 4px solid var(--blue);
+
+  .u {
+    font-family: var(--font-plexmono), monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    word-break: break-all;
+  }
+
+  h3 {
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 8px 0;
+  }
+
+  p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+}

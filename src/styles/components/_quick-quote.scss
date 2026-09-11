@@ -1,0 +1,79 @@
+.qq {
+  background: var(--chalk);
+  color: var(--carbon);
+  margin-top: 36px;
+  border-top: 5px solid var(--amber);
+  position: relative;
+  z-index: 3;
+}
+
+.qqhead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 16px 26px 0;
+
+  h3 {
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  span {
+    font-family: var(--font-plexmono), monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--blue);
+    text-transform: uppercase;
+  }
+}
+
+.qqbody {
+  padding: 16px 26px 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 11px;
+  align-items: end;
+}
+
+.fld {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+
+  label {
+    font-family: var(--font-plexmono), monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  select,
+  input {
+    background: #fff;
+    border: 2px solid var(--line);
+    padding: 12px 11px;
+    font-family: var(--font-barlow), sans-serif;
+    font-size: 14.5px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      border-color: var(--deep);
+    }
+  }
+}
+
+.plate {
+  border: 3px solid var(--carbon) !important;
+  font-family: var(--font-plexmono), monospace !important;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 17px !important;
+}

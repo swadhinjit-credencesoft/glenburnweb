@@ -1,0 +1,85 @@
+/* ============================================================
+   Presentation layer — full-height screens (user-requested
+   deviation from mockup metrics; imported last on purpose)
+   ============================================================ */
+
+/* Protobar removed — header sticks to the very top */
+header.site {
+  top: 0;
+}
+
+/* Photo heroes fill the viewport below the fixed chrome */
+.phero {
+  min-height: max(560px, calc(100vh - 105px));
+  display: flex;
+}
+
+.phero > .wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+/* Inner-page head band gets breathing room */
+.pagehead .wrap {
+  min-height: 34vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* Standard sections hold a full, balanced height */
+.sec {
+  min-height: 58vh;
+  display: flex;
+  align-items: center;
+}
+
+.sec > .wrap {
+  width: 100%;
+}
+
+/* Confirmation screen centred in the viewport */
+.conf {
+  min-height: calc(100vh - 165px);
+  display: flex;
+  align-items: center;
+}
+
+.conf > .wrap {
+  width: 100%;
+}
+
+/* Full-bleed website — no centred prototype frame, no side bands */
+body {
+  background: var(--concrete);
+}
+
+.frame {
+  max-width: none;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+@media (max-width: 860px) {
+  .phero,
+  .sec,
+  .conf {
+    min-height: auto;
+  }
+
+  .phero > .wrap,
+  .pagehead .wrap,
+  .sec {
+    display: block;
+  }
+
+  .pagehead .wrap {
+    min-height: auto;
+  }
+}

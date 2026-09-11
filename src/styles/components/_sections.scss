@@ -1,0 +1,244 @@
+.sec {
+  padding: 50px 0;
+
+  &.alt {
+    background: var(--chalk);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  &.dark {
+    background: var(--deep);
+    color: var(--chalk);
+  }
+}
+
+.sechead {
+  margin-bottom: 24px;
+
+  h2 {
+    font-size: clamp(23px, 3.4vw, 34px);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  p {
+    color: var(--muted);
+    margin-top: 9px;
+    max-width: 62ch;
+    font-size: 15.5px;
+  }
+}
+
+.sec.dark .sechead p {
+  color: #9fb2c2;
+}
+
+.grid {
+  display: grid;
+  gap: 15px;
+
+  &.g2 {
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  }
+
+  &.g3 {
+    grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+  }
+
+  &.g4 {
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+  }
+}
+
+.svc {
+  background: var(--chalk);
+  border: 1px solid var(--line);
+  padding: 21px;
+  border-top: 4px solid var(--blue);
+  transition: 0.15s;
+
+  &:hover {
+    border-top-color: var(--amber);
+  }
+
+  .ic {
+    font-family: var(--font-plexmono), monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.16em;
+    color: var(--blue);
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 8px 0;
+  }
+
+  p {
+    font-size: 14px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  .pr {
+    margin-top: 11px;
+    font-family: var(--font-plexmono), monospace;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: var(--deep);
+  }
+
+  a.more {
+    display: inline-block;
+    margin-top: 10px;
+    font-family: var(--font-archivo), sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--blue);
+    text-decoration: none;
+    border-bottom: 2px solid var(--amber);
+    padding-bottom: 2px;
+  }
+}
+
+.val {
+  background: var(--chalk);
+  border: 1px solid var(--line);
+  padding: 22px;
+  border-left: 4px solid var(--amber);
+
+  h3 {
+    font-size: 17px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 14.5px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+}
+
+.brandgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+
+  div {
+    background: var(--chalk);
+    padding: 20px 10px;
+    text-align: center;
+    font-family: var(--font-archivo), sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: var(--deep);
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      max-width: 120px;
+      height: 36px;
+      object-fit: contain;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    small {
+      display: block;
+      font-family: var(--font-plexmono), monospace;
+      font-size: 8.5px;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      margin-top: 4px;
+      font-weight: 400;
+    }
+  }
+}
+
+.rev {
+  background: var(--chalk);
+  border: 1px solid var(--line);
+  padding: 19px;
+
+  .st {
+    color: var(--amber);
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 9px 0;
+    line-height: 1.6;
+  }
+
+  .who {
+    font-family: var(--font-plexmono), monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+}
+
+.arealist {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.area {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 14px;
+  font-family: var(--font-plexmono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--chalk);
+}
+
+.note {
+  background: #fff8e4;
+  border-left: 4px solid var(--amber);
+  padding: 13px 16px;
+  font-size: 13px;
+  color: #5a4a16;
+  line-height: 1.55;
+
+  b {
+    font-family: var(--font-plexmono), monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+    color: #8a6a10;
+  }
+
+  &.q {
+    background: #fbecea;
+    border-left-color: var(--red);
+    color: #6e2a20;
+
+    b {
+      color: var(--red);
+    }
+  }
+}
