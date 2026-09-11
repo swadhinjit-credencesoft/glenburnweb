@@ -18,10 +18,23 @@ header.site {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+
   padding-top: 44px;
   padding-bottom: 44px;
+  box-sizing: border-box;
 }
 
+.phero .hero-content {
+  width: 100%;
+  max-width: 850px;
+  margin: 0;
+  text-align: left;
+}
 /* Inner-page head band gets breathing room */
 .pagehead .wrap {
   min-height: 34vh;
