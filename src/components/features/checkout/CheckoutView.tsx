@@ -8,11 +8,34 @@ import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { setField, setPayment } from "@/store/slices/checkoutSlice";
 import { PAYMENT_OPTIONS } from "@/data/checkout";
 import { SITE } from "@/data/site";
+import { money } from "@/lib/format";
+import {
+  buildOrderMessage,
+  orderTotals,
+  slotTime,
+} from "@/lib/order";
 
 export default function CheckoutView() {
   const router = useRouter();
   const dispatch = useAppDispatch();
   const co = useAppSelector((s) => s.checkout);
+  const product = useAppSelector((s) => s.product);
+  const quote = useAppSelector((s) => s.quote);
+
+  const t = orderTotals(quote.items, product);
+  const orderMsg = buildOrderMessage({
+    checkout: co,
+    product,
+    quoteItems: quote.items,
+  });
+
+  const confirmBooking = () => {
+    if (!co.firstName.trim() || !co.lastName.trim() || !co.mobile.trim()) {
+      alert("Please enter your name and mobile number to confirm your booking.");
+      return;
+    }
+    router.push("/confirmation");
+  };
 
   const field = (name: Parameters<typeof setField>[0]["field"]) => ({
     value: co[name],
@@ -129,7 +152,7 @@ export default function CheckoutView() {
                         textTransform: "uppercase",
                       }}
                     >
-                      10:30 AM
+                      {slotTime(product.slotId)}
                     </div>
                     <p
                       style={{
@@ -184,10 +207,21 @@ export default function CheckoutView() {
             <button
               className="btn btn-p"
               style={{ width: "100%" }}
-              onClick={() => router.push("/confirmation")}
+              onClick={confirmBooking}
             >
-              Confirm booking — $824.80
+              Confirm booking — {money(t.total)}
             </button>
+            <p
+              style={{
+                fontSize: 12.5,
+                color: "var(--muted)",
+                marginTop: 11,
+                textAlign: "center",
+              }}
+            >
+              Booking saved — send it to Glenburn on WhatsApp or by email on
+              the next screen.
+            </p>
           </div>
 
           <aside className="summary">

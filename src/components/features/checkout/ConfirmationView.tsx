@@ -3,9 +3,24 @@
 import Topbar from "@/components/layout/Topbar";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
+import { useAppSelector } from "@/store/hooks";
 import { CONFIRMATION_ROWS } from "@/data/confirmation";
+import {
+  buildOrderMessage,
+  mailtoUrl,
+  whatsappUrl,
+} from "@/lib/order";
 
 export default function ConfirmationView() {
+  const co = useAppSelector((s) => s.checkout);
+  const product = useAppSelector((s) => s.product);
+  const quote = useAppSelector((s) => s.quote);
+
+  const orderMsg = buildOrderMessage({
+    checkout: co,
+    product,
+    quoteItems: quote.items,
+  });
   return (
     <>
       <Topbar />
@@ -24,8 +39,8 @@ export default function ConfirmationView() {
               color: "var(--muted)",
             }}
           >
-            Confirmation is on its way to sione.t@example.co.nz, and we&apos;ll
-            text the morning of to remind you.
+            {co.email.trim() ? `Confirmation is on its way to ${co.email.trim()}` : "Keep an eye on your inbox"}
+            {co.mobile.trim() ? `, and we'll text ${co.mobile.trim()} the morning of to remind you.` : " — text us if you'd like a reminder."}
           </p>
           <div className="confcard">
             <div className="ch">
@@ -48,10 +63,29 @@ export default function ConfirmationView() {
               flexWrap: "wrap",
             }}
           >
-            <button className="btn btn-d btn-sm">Add to calendar</button>
-            <button className="btn btn-o btn-sm">Get directions</button>
-            <button className="btn btn-o btn-sm">Download tax invoice</button>
+            <a
+              className="btn btn-d btn-sm"
+              href={whatsappUrl(orderMsg)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Send your booking on WhatsApp
+            </a>
+            <a className="btn btn-o btn-sm" href={mailtoUrl(orderMsg)}>
+              Email this booking
+            </a>
           </div>
+          <p
+            style={{
+              maxWidth: "46ch",
+              margin: "16px auto 0",
+              fontSize: 13,
+              color: "var(--muted)",
+            }}
+          >
+            Click one of the buttons above to send the booking details to
+            Glenburn Tyres so we can lock in your slot.
+          </p>
         </div>
       </div>
 

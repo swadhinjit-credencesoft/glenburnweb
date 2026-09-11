@@ -39,9 +39,14 @@ export default function SiteHeader({
             ))}
           </nav>
         )}
-        <button className="cartbtn">
+        <Link
+          href="/book"
+          className="cartbtn"
+          style={{ textDecoration: "none" }}
+          title="Book or request a quote"
+        >
           Quote <span className="cnt">{count}</span>
-        </button>
+        </Link>
         <button
           className={`mnavbtn${open ? " on" : ""}`}
           aria-label="Open menu"
