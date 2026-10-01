@@ -1,8 +1,23 @@
 .loccard {
+  display: block;
   background: var(--chalk);
   border: 1px solid var(--line);
   padding: 20px;
   border-top: 4px solid var(--blue);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+
+  &:hover,
+  &:focus-visible {
+    border-top-color: var(--amber);
+    transform: translateY(-2px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+  }
 
   .u {
     font-family: var(--font-plexmono), monospace;

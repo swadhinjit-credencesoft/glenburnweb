@@ -14,6 +14,36 @@ export interface SisterLocation {
 
 export const SISTER_LOCATIONS: SisterLocation[] = [
   {
+    slug: "avondale-rosebank-tyres",
+    url: "/locations/avondale-rosebank-tyres/",
+    crumb: "Home / Areas / Avondale & Rosebank Road",
+    title:
+      "Fast-Turnaround Commercial & Fleet Tyre Services in Avondale & Rosebank Rd",
+    intro:
+      "Built for trade utes, vans and local transport operators working the Rosebank industrial corridor.",
+    areas: ["Avondale", "Rosebank Rd", "Massey industrial"],
+    audience:
+      "Business fleets, trade ute drivers, commercial vans and industrial workers on Rosebank Road — two minutes off the main strip.",
+    services: [
+      {
+        title: "Commercial Fleet Express",
+        body: "Minimal downtime for tradies and local transport operators working along the Rosebank industrial corridor. Drop your ute or van off in the morning at 1/61 Wolverton Street and pick it up by lunch.",
+      },
+      {
+        title: "Heavy-Duty Ute & 4x4 Setup",
+        body: "Heavy loads and rough job sites wear tyres and suspension quickly. We supply reinforced commercial tyres, 4x4 all-terrain and mud terrain rubber, and Shock Shop heavy-duty spring upgrades.",
+      },
+      {
+        title: "Find Us Easily",
+        body: "Located in the iconic Blue Building at 1/61 Wolverton Street, right between Avondale and New Lynn. Two minutes off Rosebank Road — look for the blue building.",
+      },
+    ],
+    primaryCta: "Book a fleet slot",
+    metaTitle: "Tyres & Fleet Services — Avondale & Rosebank Road",
+    metaDescription:
+      "Fast-turnaround commercial and fleet tyre services for Avondale and Rosebank Road industrial hub. Trade utes, vans, fleet vehicles. Glenburn Tyres.",
+  },
+  {
     slug: "new-lynn-tyres-suspension",
     url: "/locations/new-lynn-tyres-suspension/",
     crumb: "Home / Areas / New Lynn",
@@ -73,23 +103,12 @@ export const SISTER_LOCATIONS: SisterLocation[] = [
   },
 ];
 
-export const LANDING_LOCATIONS = [
-  {
-    url: "/locations/avondale-rosebank-tyres/",
-    name: "Avondale & Rosebank Rd",
-    body: "Business fleets, trade utes, commercial vans and industrial workers on Rosebank Road.",
-  },
-  {
-    url: "/locations/new-lynn-tyres-suspension/",
-    name: "New Lynn, New Windsor, Blockhouse Bay & Whau",
-    body: "Commuters and family SUVs. Pothole and speed-hump alignment, quiet EV-friendly tyres, drive-in puncture repairs.",
-  },
-  {
-    url: "/locations/glendene-titirangi-tyres/",
-    name: "Glendene, Kelston & Titirangi foothills",
-    body: "Winding roads and wet Waitakere weather. High-grip wet tyres, sway bar and steering checks, 30-point safety inspection.",
-  },
-];
+export const LANDING_LOCATIONS = SISTER_LOCATIONS.map((l) => ({
+  slug: l.slug,
+  url: l.url,
+  name: l.areas.join(", "),
+  body: l.intro,
+}));
 
 export function getSisterLocation(slug: string): SisterLocation | undefined {
   return SISTER_LOCATIONS.find((l) => l.slug === slug);

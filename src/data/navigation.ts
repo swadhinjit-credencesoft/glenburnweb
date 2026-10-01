@@ -17,7 +17,7 @@ export const MAIN_NAV: NavItem[] = [
   { label: "Tyres", href: "/tyres" },
   { label: "Services", href: "/services" },
   { label: "Shock Shop", href: "/shock-shop" },
-  { label: "Areas", href: "/locations/avondale-rosebank-tyres" },
+  { label: "Areas", href: "/locations" },
   { label: "About", href: "/about" },
   { label: "FAQs", href: "/faqs" },
   { label: "Contact", href: "/contact" },

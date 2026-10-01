@@ -1,8 +1,9 @@
 "use client";
 
-import Topbar from "@/components/layout/Topbar";
+import { BookTopbar } from "@/components/layout/Topbar";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
+import { MAIN_NAV } from "@/data/navigation";
 import { useAppSelector } from "@/store/hooks";
 import { CONFIRMATION_ROWS } from "@/data/confirmation";
 import {
@@ -23,8 +24,8 @@ export default function ConfirmationView() {
   });
   return (
     <>
-      <Topbar />
-      <SiteHeader />
+      <BookTopbar />
+      <SiteHeader nav={MAIN_NAV} />
 
       <div className="conf">
         <div className="wrap">

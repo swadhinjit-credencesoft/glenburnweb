@@ -57,16 +57,16 @@ export default function SisterLocationView({
           <div className="sechead">
             <h2>The rest of the local network</h2>
             <p>
-              Two more Glenburn workshops pages, each built around the drivers
-              in its own suburb.
+              {others.length} more Glenburn pages, each built around the drivers
+              in its own suburb cluster.
             </p>
           </div>
           <div className="grid g3">
             {others.map((l) => (
-              <div className="loccard" key={l.slug}>
+              <Link className="loccard" key={l.slug} href={l.url.replace(/\/$/, "")}>
                 <h3>{l.areas.join(", ")}</h3>
                 <p>{l.intro}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -9,6 +9,7 @@ import { MAIN_NAV } from "@/data/navigation";
 import { LANDING_LOCATIONS } from "@/data/locations";
 
 export default function LocalLandingView() {
+  const others = LANDING_LOCATIONS.filter((l) => l.url !== "/locations/avondale-rosebank-tyres/");
   return (
     <>
       <BookTopbar />
@@ -66,19 +67,17 @@ export default function LocalLandingView() {
           <div className="sechead">
             <h2>The rest of the local network</h2>
             <p>
-              Two more Glenburn workshops pages, each built around the drivers
+              {others.length} more Glenburn pages, each built around the drivers
               in its own suburb cluster.
             </p>
           </div>
           <div className="grid g3">
-            {LANDING_LOCATIONS.filter((l) => l.url !== "/locations/avondale-rosebank-tyres/").map(
-              (l) => (
-                <Link className="loccard" key={l.url} href={l.url.replace(/\/$/, "")}>
-                  <h3>{l.name}</h3>
-                  <p>{l.body}</p>
-                </Link>
-              )
-            )}
+            {others.map((l) => (
+              <Link className="loccard" key={l.url} href={l.url.replace(/\/$/, "")}>
+                <h3>{l.name}</h3>
+                <p>{l.body}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
