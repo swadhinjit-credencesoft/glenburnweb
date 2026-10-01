@@ -28,7 +28,7 @@ export default function SiteFooter({
         <div className="wrap">
           <div className="bottom" style={{ border: "none", paddingTop: 0 }}>
             <span>© 2026 {SITE.legalName}</span>
-            <span>MTA Assured · Registered Tyrewise retailer</span>
+            <span>Registered Tyrewise retailer</span>
           </div>
         </div>
       </footer>
@@ -41,7 +41,7 @@ export default function SiteFooter({
         <div className="wrap">
           <div className="bottom" style={{ border: "none", paddingTop: 0 }}>
             <span>© 2026 {SITE.legalName}</span>
-            <span>MTA Assured workshop</span>
+            {/* <span>MTA Assured workshop</span> */}
           </div>
         </div>
       </footer>
@@ -115,7 +115,7 @@ export default function SiteFooter({
           </div>
         </div>
         <div className="bottom">
-          <span>© 2026 {SITE.legalName} · MTA Assured workshop</span>
+          <span>© 2026 {SITE.legalName}</span>
           <span>Registered Tyrewise retailer</span>
         </div>
       </div>

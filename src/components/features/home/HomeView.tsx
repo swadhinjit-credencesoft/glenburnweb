@@ -42,7 +42,7 @@ export default function HomeView() {
               className="btn btn-p"
               onClick={() => router.push("/book")}
             >
-              🚀 Request a quick quote
+              📅Book an appointment
             </button>
             <a href={SITE.phoneHref} className="btn btn-w">📞 Call {SITE.phone}</a>
           </div>

@@ -48,7 +48,7 @@ export default function TyreDetailView({ slug }: { slug: string }) {
       <Topbar
         right={
           <>
-            📞 <strong>{SITE.phone}</strong> · MTA ASSURED
+            📞 <strong>{SITE.phone}</strong>
           </>
         }
       />

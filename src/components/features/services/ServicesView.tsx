@@ -19,7 +19,8 @@ export default function ServicesView() {
         crumb="Home / Services"
         title="Our services"
       >
-        Four specialist service lines backed by 35 years of experience, MTA accreditation and the Central West Shock Shop franchise.
+        Four specialist service lines backed by 35 years of experience and the
+        Central West Shock Shop franchise.
       </PageHead>
 
       {SERVICES.map((s, i) => (

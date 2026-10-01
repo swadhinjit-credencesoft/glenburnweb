@@ -43,7 +43,7 @@ export const SERVICES: Service[] = [
   {
     code: "PNC",
     title: "Puncture repair",
-    body: "Don't let a flat ruin your day. Strict MTA-compliant internal plug and patch repairs, drive-in, usually while you wait.",
+    body: "Don't let a flat ruin your day. Internal plug and patch repairs done to industry standard, drive-in, usually while you wait.",
     price: "$35 · walk-ins welcome",
     linkLabel: "Drive in →",
     href: "/book",
@@ -106,7 +106,7 @@ export const AREAS = [
 export const HERO_BADGES: { bold: string; span?: string }[] = [
   { bold: "4.8★ Google", span: "200+ reviews" },
   { bold: "35+ Years", span: "local" },
-  { bold: "MTA Assured" },
+  // { bold: "MTA Assured" },
   { bold: "Central West Shock Shop", span: "16+ yrs" },
 ];
 

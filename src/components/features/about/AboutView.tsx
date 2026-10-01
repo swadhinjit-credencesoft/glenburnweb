@@ -54,14 +54,14 @@ export default function AboutView() {
                 franchise on precision.
               </p>
             </div>
-            <div className="val">
+            {/* <div className="val">
               <h3>MTA accredited</h3>
               <p>
                 MTA Assured since day one. Every repair, every fitting and
                 every alignment is carried out to the standards the Motor Trade
                 Association stands behind.
               </p>
-            </div>
+            </div> */}
           </div>
           <p className="note" style={{ marginTop: 18 }}>
             <b>How to find us</b>

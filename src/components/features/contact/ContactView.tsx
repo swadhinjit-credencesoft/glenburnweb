@@ -91,7 +91,7 @@ export default function ContactView() {
             </a>
           </div>
 
-          <div className="msgform" style={{ marginTop: 34 }}>
+          {/* <div className="msgform" style={{ marginTop: 34 }}>
             <h3>Send us a message</h3>
             {sent ? (
               <p className="note" style={{ marginTop: 12 }}>
@@ -144,7 +144,7 @@ export default function ContactView() {
                 </div>
               </div>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
 

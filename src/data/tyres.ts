@@ -69,8 +69,8 @@ export const TYRES: Tyre[] = [
     badge: { text: "Second-hand", variant: "dark" },
     chips: [
       { text: "TREAD 6.2 MM" },
-      { text: "MADE 2023" },
-      { text: "MTA INSPECTED" },
+{ text: "MADE 2023" },
+    // { text: "MTA INSPECTED" },
     ],
     stockLine: "● ONLY 2 AVAILABLE",
     stockLow: true,
@@ -99,7 +99,7 @@ export const PDP_DETAIL = {
     { k: "External noise", v: "70 dB" },
     { k: "Treadwear rating", v: "400" },
     { k: "Manufactured", v: "Week 34, 2025" },
-    { k: "Fitted by", v: "MTA assured technicians" },
+    // { k: "Fitted by", v: "MTA assured technicians" },
   ] as SpecRow[],
   priceEach: 189,
   priceLbl:

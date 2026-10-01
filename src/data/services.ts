@@ -58,7 +58,7 @@ export const SERVICES: Service[] = [
     title: "Fast, Safe Puncture Repairs in Avondale",
     body: "Don't let a flat tyre ruin your day. We perform strict internal patch repairs to get you back on the road safely and affordably.",
     details: [
-      "MTA-compliant internal plug and patch repairs",
+      // "MTA-compliant internal plug and patch repairs",
       "Drive-in, usually while you wait",
       "Safety inspection before repair to confirm tyre is serviceable",
       "If the tyre is beyond repair, we'll help you find the right replacement",

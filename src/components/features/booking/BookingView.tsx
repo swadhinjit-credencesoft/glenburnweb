@@ -30,7 +30,7 @@ export default function BookingView() {
         crumb="Home / Book"
         title="Book your service or request a tyre quote in Avondale"
       >
-        Fast, transparent and MTA-assured. Fill out the short form and Aveen
+        Fast and transparent. Fill out the short form and Aveen
         and the team will confirm your time or come back to you within 30
         minutes.
       </PageHead>
@@ -239,13 +239,13 @@ export default function BookingView() {
                 <div className="mt">During workshop hours</div>
               </div>
             </div>
-            <div className="sitem">
+            {/* <div className="sitem">
               <div className="ti" style={{ background: "var(--blue)" }} />
               <div>
                 <div className="nm">MTA assured</div>
                 <div className="mt">Accredited workshop</div>
               </div>
-            </div>
+            </div> */}
             <div className="sitem">
               <div className="ti" style={{ background: "var(--green)" }} />
               <div>
