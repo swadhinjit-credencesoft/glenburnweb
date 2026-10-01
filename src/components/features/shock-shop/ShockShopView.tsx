@@ -7,6 +7,7 @@ import SiteFooter from "@/components/layout/SiteFooter";
 import PhotoHero from "@/components/ui/PhotoHero";
 import { MAIN_NAV } from "@/data/navigation";
 import { SIGNS, PROCESS, HERO_BRANDS } from "@/data/shock-shop";
+import { SITE } from "@/data/site";
 
 export default function ShockShopView() {
   return (
@@ -33,7 +34,7 @@ export default function ShockShopView() {
           <Link href="/book" className="btn btn-p">
             Book a free suspension check
           </Link>
-          <button className="btn btn-w">📞 Talk to a technician</button>
+          <a href={SITE.phoneHref} className="btn btn-phone-light">📞 Call {SITE.phone}</a>
         </div>
         <div className="brandrow">
           {HERO_BRANDS.map((b) => (

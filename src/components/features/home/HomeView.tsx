@@ -44,7 +44,7 @@ export default function HomeView() {
             >
               📅Book an appointment
             </button>
-            <a href={SITE.phoneHref} className="btn btn-w">📞 Call {SITE.phone}</a>
+            <a href={SITE.phoneHref} className="btn btn-phone-light">📞 Call {SITE.phone}</a>
           </div>
           <div className="badges">
             {HERO_BADGES.map((b) => (

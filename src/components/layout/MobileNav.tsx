@@ -5,10 +5,10 @@ import { SITE } from "@/data/site";
 
 export default function MobileNav() {
   return (
-    <nav className="mobilenav">
-      <a href={SITE.phoneHref} className="mn-item">
+    <nav className="mobilenav" aria-label="Mobile quick actions">
+      <a href={SITE.phoneHref} className="mn-item mn-call" title={`Call Glenburn Tyres directly on ${SITE.phone}`}>
         <span className="mn-icon">📞</span>
-        <span>Call</span>
+        <span style={{ fontWeight: 800, color: "var(--amber)", fontSize: "11px" }}>Call (09) 828 4180</span>
       </a>
       <Link href="/book" className="mn-item">
         <span className="mn-icon">📅</span>

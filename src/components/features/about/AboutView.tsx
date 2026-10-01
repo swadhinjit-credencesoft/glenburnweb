@@ -100,9 +100,9 @@ export default function AboutView() {
             <div>
               <h4>📞 Call or email</h4>
               <p>
-                Phone: <a href={SITE.phoneHref}>{SITE.phone}</a>
+                Phone: <a href={SITE.phoneHref} style={{ fontWeight: 800, color: "var(--blue)", fontSize: 16 }}>{SITE.phone}</a>
                 <br />
-                Email: info@glenburntyres.co.nz
+                Email: {SITE.email}
               </p>
               <p style={{ marginTop: 10, color: "var(--muted)", fontSize: 13.5 }}>
                 Franchise: Central West Shock Shop
@@ -132,6 +132,9 @@ export default function AboutView() {
             <Link href="/book" className="btn btn-p">
               📅 Book an appointment
             </Link>
+            <a href={SITE.phoneHref} className="btn btn-phone">
+              📞 Call {SITE.phone}
+            </a>
             <a
               href={SITE.addressHref}
               target="_blank"

@@ -2,10 +2,10 @@ export const SITE = {
   name: "Glenburn Tyres",
   legalName: "Glenburn Tyre Service Ltd",
   phone: "(09) 828 4180",
-  phoneHref: "tel:+9348632268",
+  phoneHref: "tel:+6498284180",
   // WhatsApp Business number, international format without "+" — update if
   // the workshop uses a dedicated WhatsApp mobile rather than the landline.
-  waNumber: "9348632268",
+  waNumber: "6498284180",
   email: "info@glenburntyres.co.nz",
   address: "1/61 Wolverton Street",
   addressLine2: "Avondale, Auckland 0600",

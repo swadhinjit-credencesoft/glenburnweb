@@ -47,7 +47,7 @@ export default function ContactView() {
             <div>
               <h4>📞 Call or Email</h4>
               <p>
-                Phone: <a href={SITE.phoneHref}>{SITE.phone}</a><br />
+                Phone: <a href={SITE.phoneHref} style={{ fontWeight: 800, color: "var(--blue)", fontSize: 16 }}>{SITE.phone}</a><br />
                 Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
               </p>
               <p style={{ marginTop: 10, color: "var(--muted)", fontSize: 13.5 }}>
@@ -78,8 +78,8 @@ export default function ContactView() {
             <Link href="/book" className="btn btn-p">
               📅 Book an Appointment
             </Link>
-            <a href={SITE.phoneHref} className="btn btn-o">
-              📞 Call Workshop
+            <a href={SITE.phoneHref} className="btn btn-phone">
+              📞 Call {SITE.phone}
             </a>
             <a
               href={SITE.addressHref}

@@ -15,7 +15,7 @@ export default function SiteFooter({
               © 2026 {SITE.legalName} · Official Central West Shock Shop
               franchise
             </span>
-            <span>{SITE.phone}</span>
+            <span className="footer-phone">{SITE.phone}</span>
           </div>
         </div>
       </footer>
@@ -41,7 +41,6 @@ export default function SiteFooter({
         <div className="wrap">
           <div className="bottom" style={{ border: "none", paddingTop: 0 }}>
             <span>© 2026 {SITE.legalName}</span>
-            {/* <span>MTA Assured workshop</span> */}
           </div>
         </div>
       </footer>
@@ -53,14 +52,15 @@ export default function SiteFooter({
       <div className="wrap">
         <div className="cols">
           <div>
-<div className="lockup" style={{ marginBottom: 13, display: 'flex', alignItems: 'center', gap: 8 }}>
-<img
-            className="site-logo"
-            src="/images/logo2.png"
-            alt="Glenburn Tyres"
-          />
-        </div>
-        <p style={{ fontSize: 13, fontWeight: 300, maxWidth: "34ch" }}>
+            <div className="lockup" style={{ marginBottom: 13, display: "flex", alignItems: "center", gap: 8 }}>
+              <img
+                className="site-logo"
+                src="/images/glenburnlogo.png"
+                alt="Glenburn Tyres"
+                style={{ maxHeight: 48, maxWidth: 200, width: "auto", height: "auto", objectFit: "contain", display: "block" }}
+              />
+            </div>
+            <p style={{ fontSize: 13, fontWeight: 300, maxWidth: "34ch" }}>
               Independent tyre, wheel and suspension specialists in Avondale
               since 1989. Official Central West Shock Shop franchise.
             </p>
@@ -93,7 +93,9 @@ export default function SiteFooter({
           </div>
           <div>
             <h4>Contact</h4>
-            <a href={SITE.phoneHref}>{SITE.phone}</a>
+            <a href={SITE.phoneHref} className="footer-phone" title={`Call Glenburn Tyres on ${SITE.phone}`}>
+              📞 {SITE.phone}
+            </a>
             <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
             <a
               href={SITE.addressHref}

@@ -1,7 +1,7 @@
 .topbar {
   background: var(--deep);
-  color: #9fb2c2;
-  font-size: 12px;
+  color: #cfdbe6;
+  font-size: 12.5px;
   padding: 9px 0;
 
   .wrap {
@@ -13,7 +13,35 @@
   }
 
   a {
+    color: #ffffff;
     text-decoration: none;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: var(--amber);
+    }
+  }
+
+  .phone-link {
+    color: var(--amber);
+    font-weight: 800;
+    font-size: 13.5px;
+    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    strong {
+      color: var(--amber);
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: #ffffff;
+      strong {
+        color: #ffffff;
+      }
+    }
   }
 
   strong {
@@ -29,5 +57,12 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     padding: 5px 12px;
+    border-radius: 3px;
+    transition: background 0.15s ease;
+
+    &:hover {
+      background: #e0a20f;
+      color: var(--deep);
+    }
   }
 }

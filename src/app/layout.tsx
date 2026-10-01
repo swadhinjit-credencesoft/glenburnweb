@@ -31,8 +31,15 @@ export const metadata: Metadata = {
     template: "%s | Glenburn Tyres",
   },
   description:
-    // "Independent tyre, wheel and suspension specialists in Avondale since 1989. MTA assured. Official Central West Shock Shop franchise.",
     "Independent tyre, wheel and suspension specialists in Avondale since 1989. Official Central West Shock Shop franchise.",
+  icons: {
+    icon: [
+      { url: "/glenburnlogo.png", type: "image/svg+xml" },
+      { url: "/glenburnlogo.png", type: "image/svg+xml" },
+    ],
+    shortcut: "/glenburnlogo.png",
+    apple: "/glenburnlogo.png",
+  },
 };
 
 export default function RootLayout({

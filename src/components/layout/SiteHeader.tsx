@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { NavItem } from "@/types";
-import { useAppSelector } from "@/store/hooks";
 import { SITE } from "@/data/site";
 
 export default function SiteHeader({
@@ -13,13 +12,12 @@ export default function SiteHeader({
   nav?: NavItem[];
   active?: string;
 }) {
-  const count = useAppSelector((s) => s.quote.count);
   const [open, setOpen] = useState(false);
 
   return (
     <header className="site">
       <div className="wrap">
-        <Link className="lockup" href="/">
+        <Link className="lockup" href="/" title="Glenburn Tyres — Home">
           <img
             className="site-logo"
             src="/images/glenburnlogo.png"
@@ -39,14 +37,15 @@ export default function SiteHeader({
             ))}
           </nav>
         )}
-        {/* <Link
-          href="/book"
-          className="cartbtn"
-          style={{ textDecoration: "none" }}
-          title="Book or request a quote"
+
+        <a
+          href={SITE.phoneHref}
+          className="header-phone"
+          title={`Call Glenburn Tyres directly on ${SITE.phone}`}
         >
-          Quote <span className="cnt">{count}</span>
-        </Link> */}
+          📞 {SITE.phone}
+        </a>
+
         <button
           className={`mnavbtn${open ? " on" : ""}`}
           aria-label="Open menu"
@@ -73,11 +72,11 @@ export default function SiteHeader({
               </Link>
             ))}
             <div className="mnavcta">
-              <a href={SITE.phoneHref} className="btn btn-w btn-sm">
+              <a href={SITE.phoneHref} className="btn btn-phone btn-sm">
                 📞 Call {SITE.phone}
               </a>
               <Link href="/book" className="btn btn-p btn-sm" onClick={() => setOpen(false)}>
-                📅 Book an appointment
+                📅 Book appointment
               </Link>
             </div>
           </div>
