@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { BookTopbar } from "@/components/layout/Topbar";
 import SiteHeader from "@/components/layout/SiteHeader";
+import SiteFooter from "@/components/layout/SiteFooter";
 import { MAIN_NAV } from "@/data/navigation";
 import PageHead from "@/components/ui/PageHead";
 import { BOOKING_SERVICES } from "@/data/booking";
@@ -284,6 +285,8 @@ export default function BookingView() {
           </aside>
         </div>
       </div>
+
+      <SiteFooter variant="full" />
     </>
   );
 }

@@ -103,7 +103,7 @@ Every area page is served by the same workshop, so you get the
         </div>
       </div>
 
-      <SiteFooter variant="simple" />
+      <SiteFooter />
     </>
   );
 }

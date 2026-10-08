@@ -171,6 +171,19 @@
     text-transform: uppercase;
   }
 
+  .pn {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+
+    &:hover h3,
+    &:focus-visible h3 {
+      color: var(--blue);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+
   .sz {
     font-family: var(--font-plexmono), monospace;
     font-size: 12.5px;

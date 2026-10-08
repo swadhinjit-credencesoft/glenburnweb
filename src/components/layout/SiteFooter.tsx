@@ -1,63 +1,35 @@
 import Link from "next/link";
 import { SITE } from "@/data/site";
 
-export default function SiteFooter({
-  variant = "full",
-}: {
-  variant?: "full" | "simple" | "minimal" | "shock";
-}) {
-  if (variant === "shock") {
-    return (
-      <footer className="site">
-        <div className="wrap">
-          <div className="bottom" style={{ border: "none", paddingTop: 0 }}>
-            <span>
-              © 2026 {SITE.legalName} · Official Central West Shock Shop
-              franchise
-            </span>
-            <span className="footer-phone">{SITE.phone}</span>
-          </div>
-        </div>
-      </footer>
-    );
-  }
-
-  if (variant === "minimal") {
-    return (
-      <footer className="site" style={{ marginTop: 28 }}>
-        <div className="wrap">
-          <div className="bottom" style={{ border: "none", paddingTop: 0 }}>
-            <span>© 2026 {SITE.legalName}</span>
-            <span>Registered Tyrewise retailer</span>
-          </div>
-        </div>
-      </footer>
-    );
-  }
-
-  if (variant === "simple") {
-    return (
-      <footer className="site">
-        <div className="wrap">
-          <div className="bottom" style={{ border: "none", paddingTop: 0 }}>
-            <span>© 2026 {SITE.legalName}</span>
-          </div>
-        </div>
-      </footer>
-    );
-  }
-
+export default function SiteFooter(
+  _props: { variant?: "full" | "simple" | "minimal" | "shock" } = {}
+) {
   return (
     <footer className="site">
       <div className="wrap">
         <div className="cols">
           <div>
-            <div className="lockup" style={{ marginBottom: 13, display: "flex", alignItems: "center", gap: 8 }}>
+            <div
+              className="lockup"
+              style={{
+                marginBottom: 13,
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+              }}
+            >
               <img
                 className="site-logo"
                 src="/images/glenburnlogo.png"
                 alt="Glenburn Tyres"
-                style={{ maxHeight: 48, maxWidth: 200, width: "auto", height: "auto", objectFit: "contain", display: "block" }}
+                style={{
+                  maxHeight: 48,
+                  maxWidth: 200,
+                  width: "auto",
+                  height: "auto",
+                  objectFit: "contain",
+                  display: "block",
+                }}
               />
             </div>
             <p style={{ fontSize: 13, fontWeight: 300, maxWidth: "34ch" }}>
@@ -93,7 +65,11 @@ export default function SiteFooter({
           </div>
           <div>
             <h4>Contact</h4>
-            <a href={SITE.phoneHref} className="footer-phone" title={`Call Glenburn Tyres on ${SITE.phone}`}>
+            <a
+              href={SITE.phoneHref}
+              className="footer-phone"
+              title={`Call Glenburn Tyres on ${SITE.phone}`}
+            >
               📞 {SITE.phone}
             </a>
             <a href={`mailto:${SITE.email}`}>{SITE.email}</a>

@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import Link from "next/link";
 import Topbar from "@/components/layout/Topbar";
 import SiteHeader from "@/components/layout/SiteHeader";
+import SiteFooter from "@/components/layout/SiteFooter";
 import PageHead from "@/components/ui/PageHead";
 import ProductCard from "./ProductCard";
 import { MAIN_NAV } from "@/data/navigation";
@@ -93,6 +94,8 @@ export default function TyreResultsView() {
           </div>
         </div>
       </div>
+
+      <SiteFooter variant="full" />
     </>
   );
 }

@@ -72,7 +72,7 @@ export default function SisterLocationView({
         </div>
       </div>
 
-      <SiteFooter variant="simple" />
+      <SiteFooter />
     </>
   );
 }

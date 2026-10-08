@@ -82,7 +82,7 @@ export default function LocalLandingView() {
         </div>
       </div>
 
-      <SiteFooter variant="simple" />
+      <SiteFooter />
     </>
   );
 }

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Topbar from "@/components/layout/Topbar";
 import SiteHeader from "@/components/layout/SiteHeader";
+import SiteFooter from "@/components/layout/SiteFooter";
 import { MAIN_NAV } from "@/data/navigation";
 import { getTyre, PDP_DETAIL, QTY_OPTIONS } from "@/data/tyres";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
@@ -250,6 +251,8 @@ export default function TyreDetailView({ slug }: { slug: string }) {
           </aside>
         </div>
       </div>
+
+      <SiteFooter variant="full" />
     </>
   );
 }

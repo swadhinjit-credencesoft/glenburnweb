@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import type { Tyre } from "@/types";
 
 function Bars({ filled }: { filled: number }) {
@@ -14,8 +14,6 @@ function Bars({ filled }: { filled: number }) {
 }
 
 export default function ProductCard({ tyre }: { tyre: Tyre }) {
-  const router = useRouter();
-
   const badgeStyle =
     tyre.badge?.variant === "dark"
       ? { background: "var(--carbon)", color: "var(--chalk)" }
@@ -36,7 +34,9 @@ export default function ProductCard({ tyre }: { tyre: Tyre }) {
       </div>
       <div className="pinfo">
         <div className="brand">{tyre.brand}</div>
-        <h3>{tyre.name}</h3>
+        <Link className="pn" href={`/tyres/${tyre.slug}`}>
+          <h3>{tyre.name}</h3>
+        </Link>
         <div className="sz">{tyre.size}</div>
         <div className="chips">
           {tyre.chips.map((c) => (
@@ -81,12 +81,6 @@ export default function ProductCard({ tyre }: { tyre: Tyre }) {
         <div className={`stock${tyre.stockLow ? " low" : ""}`}>
           {tyre.stockLine}
         </div>
-        <button
-          className="btn btn-p btn-sm"
-          onClick={() => router.push(`/tyres/${tyre.slug}`)}
-        >
-          Choose this tyre
-        </button>
       </div>
     </article>
   );

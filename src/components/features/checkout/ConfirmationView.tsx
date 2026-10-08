@@ -90,7 +90,7 @@ export default function ConfirmationView() {
         </div>
       </div>
 
-      <SiteFooter variant="minimal" />
+      <SiteFooter />
     </>
   );
 }

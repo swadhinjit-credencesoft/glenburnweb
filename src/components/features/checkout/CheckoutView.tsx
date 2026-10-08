@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import Topbar from "@/components/layout/Topbar";
 import SiteHeader from "@/components/layout/SiteHeader";
+import SiteFooter from "@/components/layout/SiteFooter";
 import PageHead from "@/components/ui/PageHead";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { setField, setPayment } from "@/store/slices/checkoutSlice";
@@ -279,6 +280,8 @@ export default function CheckoutView() {
           </aside>
         </div>
       </div>
+
+      <SiteFooter variant="full" />
     </>
   );
 }

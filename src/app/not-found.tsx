@@ -75,7 +75,7 @@ export default function NotFound() {
         </div>
       </div>
 
-      <SiteFooter variant="simple" />
+      <SiteFooter />
     </>
   );
 }

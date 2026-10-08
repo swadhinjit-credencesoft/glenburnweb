@@ -125,7 +125,7 @@ export default function ShockShopView() {
         </div>
       </div>
 
-      <SiteFooter variant="shock" />
+      <SiteFooter />
     </>
   );
 }
