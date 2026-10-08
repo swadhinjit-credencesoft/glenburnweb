@@ -84,7 +84,7 @@ export default function ServiceDetailView({
               </div>
             )}
 
-            <div className="service-content-grid has-booking">
+            <div className="service-content-grid">
               <div className="service-panel">
                 <h3>
                   <span>📦</span> What&apos;s Included
@@ -160,9 +160,11 @@ export default function ServiceDetailView({
                 </div>
               </div>
 
-              <aside className="service-booking">
-                <BookingPanel serviceId={service.id} />
-              </aside>
+              <section className="service-booking-section">
+                <div className="service-booking">
+                  <BookingPanel serviceId={service.id} />
+                </div>
+              </section>
             </div>
           </div>
         </div>
