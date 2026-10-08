@@ -122,7 +122,7 @@ export const SERVICES: ServiceItem[] = [
     title: "Fast, Safe Puncture Repairs in Avondale",
     body: "Don't let a flat tyre ruin your day. We perform strict internal patch repairs to get you back on the road safely and affordably.",
     whatsIncluded: [
-      "MTA-standard internal combination plug & vulcanised patch repair",
+      "Internal combination plug & vulcanised patch repair",
       "Complete tyre dismount & internal carcass safety inspection",
       "Bead seal inspection, rim bead cleaning & new valve core",
       "Precision wheel re-balancing and immersion pressure leak test",
@@ -131,7 +131,7 @@ export const SERVICES: ServiceItem[] = [
     highlights: [
       { label: "Turnaround Time", value: "15–20 minutes" },
       { label: "Standard Price", value: "$35 (Walk-ins welcome)" },
-      { label: "Repair Standard", value: "MTA & NZTA Compliant" },
+      { label: "Repair Standard", value: "NZTA Compliant" },
     ],
     expertSections: [
       {
