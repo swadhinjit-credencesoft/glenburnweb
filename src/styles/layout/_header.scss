@@ -2,38 +2,57 @@ header.site {
   background: var(--chalk);
   border-bottom: 2px solid var(--deep);
   position: sticky;
-  top: 49px;
+  top: 0;
   z-index: 100;
+  width: 100%;
 
   .wrap {
     display: flex;
     align-items: center;
-    gap: 24px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
 .lockup {
   display: flex;
   align-items: center;
-  gap: 11px;
+  gap: 10px;
   flex: 0 0 auto;
   text-decoration: none;
 
   img.site-logo {
-    height: 52px;
-    max-height: 52px;
+    height: 48px;
+    max-height: 48px;
     width: auto;
-    max-width: 220px;
+    max-width: 190px;
     object-fit: contain;
     display: block;
+    transition: height 0.2s ease;
+  }
+
+  @media (max-width: 480px) {
+    img.site-logo {
+      height: 38px;
+      max-height: 38px;
+      max-width: 155px;
+    }
+  }
+
+  @media (max-width: 340px) {
+    img.site-logo {
+      height: 34px;
+      max-height: 34px;
+      max-width: 135px;
+    }
   }
 }
 
 .mark {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: var(--deep);
   display: grid;
@@ -44,7 +63,7 @@ header.site {
   &::before {
     content: "";
     position: absolute;
-    inset: 6px;
+    inset: 5px;
     border-radius: 50%;
     border: 2px solid var(--amber);
   }
@@ -52,7 +71,7 @@ header.site {
   span {
     font-family: var(--font-archivo), sans-serif;
     font-weight: 900;
-    font-size: 18px;
+    font-size: 16px;
     color: var(--chalk);
     position: relative;
     letter-spacing: -0.04em;
@@ -63,7 +82,7 @@ header.site {
   .n1 {
     font-family: var(--font-archivo), sans-serif;
     font-weight: 900;
-    font-size: 22px;
+    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: -0.035em;
     color: var(--deep);
@@ -78,29 +97,36 @@ header.site {
     text-transform: uppercase;
     color: var(--muted);
     display: block;
-    margin-top: 4px;
+    margin-top: 3px;
   }
 }
 
 nav.main {
   display: flex;
-  gap: 18px;
+  gap: 14px;
   margin-left: auto;
   align-items: center;
+
+  @media (max-width: 1120px) {
+    gap: 10px;
+  }
 
   a {
     font-family: var(--font-archivo), sans-serif;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 12.5px;
     text-transform: uppercase;
     text-decoration: none;
     color: var(--deep);
-    padding: 4px 0;
+    padding: 6px 0;
     border-bottom: 2px solid transparent;
+    white-space: nowrap;
+    transition: color 0.15s ease, border-color 0.15s ease;
 
     &:hover,
     &.act {
       border-bottom-color: var(--amber);
+      color: var(--deep);
     }
   }
 }
@@ -109,11 +135,10 @@ nav.main {
 nav.main .hasdrop {
   position: relative;
 
-  /* strip the bare-link underline treatment from dropdown items */
   a.droplink {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 4px;
     border-bottom: 2px solid transparent;
 
     &:hover,
@@ -135,23 +160,24 @@ nav.main .hasdrop {
 
   .drop {
     position: absolute;
-    top: calc(100% + 12px);
-    left: -14px;
-    min-width: 284px;
+    top: calc(100% + 8px);
+    left: -10px;
+    min-width: 270px;
     background: #ffffff;
     border: 1px solid var(--line);
     border-top: 3px solid var(--amber);
-    box-shadow: 0 18px 40px rgba(8, 18, 32, 0.14);
+    box-shadow: 0 16px 36px rgba(8, 18, 32, 0.14);
     padding: 6px;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-6px);
+    transform: translateY(-4px);
     transition: opacity 0.16s ease, transform 0.16s ease, visibility 0.16s;
     z-index: 60;
+    border-radius: 0 0 4px 4px;
 
     a {
       display: block;
-      padding: 10px 12px;
+      padding: 9px 12px;
       border-bottom: none !important;
       text-transform: none;
       font-size: 13px;
@@ -179,14 +205,14 @@ nav.main .hasdrop {
         font-size: 11px;
         letter-spacing: 0.04em;
         color: var(--muted);
-        margin-top: 3px;
+        margin-top: 2px;
       }
     }
 
     a.dropall {
       font-family: var(--font-plexmono), monospace;
       font-size: 11px;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--blue);
       border-bottom: 1px solid var(--line) !important;
@@ -212,18 +238,19 @@ nav.main .hasdrop {
 .header-phone {
   font-family: var(--font-archivo), sans-serif;
   font-weight: 800;
-  font-size: 13.5px;
+  font-size: 13px;
   color: var(--deep);
   background: #ffffff;
-  border: 2px solid var(--deep);
-  padding: 8px 14px;
+  border: 1.5px solid var(--deep);
+  padding: 7px 12px;
   border-radius: 4px;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   letter-spacing: 0.02em;
   white-space: nowrap;
+  flex-shrink: 0;
   transition: all 0.15s ease;
 
   &:hover {
@@ -239,20 +266,23 @@ nav.main .hasdrop {
 .cartbtn {
   background: var(--deep);
   color: var(--chalk);
-  padding: 11px 15px;
+  padding: 8px 12px;
   font-family: var(--font-archivo), sans-serif;
   font-weight: 800;
-  font-size: 12px;
+  font-size: 11.5px;
   text-transform: uppercase;
   display: flex;
-  gap: 7px;
+  gap: 6px;
   align-items: center;
+  border-radius: 3px;
+  flex-shrink: 0;
 
   .cnt {
     background: var(--amber);
     color: var(--deep);
     font-family: var(--font-plexmono), monospace;
-    font-size: 11px;
-    padding: 1px 6px;
+    font-size: 10.5px;
+    padding: 1px 5px;
+    border-radius: 2px;
   }
 }

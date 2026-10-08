@@ -2,16 +2,18 @@
   display: block;
   background: var(--chalk);
   border: 1px solid var(--line);
-  padding: 20px;
+  padding: clamp(16px, 3vw, 20px);
   border-top: 4px solid var(--blue);
   text-decoration: none;
   color: inherit;
-  transition: border-color 0.15s ease, transform 0.15s ease;
+  border-radius: 4px;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
 
   &:hover,
   &:focus-visible {
     border-top-color: var(--amber);
     transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
   }
 
   &:focus-visible {
@@ -28,14 +30,15 @@
   }
 
   h3 {
-    font-size: 17px;
+    font-size: clamp(15.5px, 2.2vw, 17px);
     font-weight: 800;
     text-transform: uppercase;
     margin: 8px 0;
+    line-height: 1.25;
   }
 
   p {
-    font-size: 14px;
+    font-size: 13.5px;
     color: var(--muted);
     line-height: 1.55;
   }

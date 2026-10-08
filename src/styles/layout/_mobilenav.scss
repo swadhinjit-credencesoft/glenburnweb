@@ -1,6 +1,6 @@
 /* ============================================================
    Mobile navigation chrome — sticky bottom bar, hamburger +
-   drawer (moved out of the presentation layer)
+   drawer
    ============================================================ */
 
 /* Mobile sticky bottom nav */
@@ -12,17 +12,20 @@
   right: 0;
   z-index: 200;
   background: var(--deep);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 6px 0 max(6px, env(safe-area-inset-bottom));
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 4px 0 max(6px, env(safe-area-inset-bottom));
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 860px) {
   .mobilenav {
     display: flex;
     justify-content: space-around;
+    align-items: center;
   }
+
   body {
-    padding-bottom: 60px;
+    padding-bottom: 64px;
   }
 }
 
@@ -35,13 +38,26 @@
   font-weight: 600;
   color: var(--chalk);
   text-decoration: none;
-  padding: 4px 12px;
+  padding: 4px 8px;
   min-height: 44px;
+  min-width: 0;
   justify-content: center;
+  flex: 1;
+  text-align: center;
+
+  span:last-child {
+    font-size: clamp(10px, 2.7vw, 11px);
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
 }
 
 .mn-icon {
-  font-size: 18px;
+  font-size: 17px;
+  line-height: 1;
 }
 
 /* Hamburger + drawer nav */
@@ -49,7 +65,7 @@
   display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   /* Hamburger replaces the desktop nav */
   nav.main {
     display: none;
@@ -61,12 +77,15 @@
     justify-content: center;
     align-items: center;
     gap: 4px;
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
     flex: 0 0 auto;
     background: var(--deep);
     border: none;
+    border-radius: 4px;
     cursor: pointer;
+    padding: 8px;
+    transition: background 0.15s ease;
 
     span {
       display: block;
@@ -74,6 +93,7 @@
       height: 2px;
       background: var(--chalk);
       transition: transform 0.2s ease, opacity 0.2s ease;
+      border-radius: 1px;
     }
 
     &.on {
@@ -99,30 +119,38 @@
     z-index: 120;
     background: var(--deep);
     border-top: 1px solid rgba(255, 255, 255, 0.12);
-    box-shadow: 0 20px 36px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 36px rgba(0, 0, 0, 0.45);
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 
     .wrap {
       display: flex;
       flex-direction: column;
-      padding-top: 6px;
-      padding-bottom: 22px;
+      padding-top: 8px;
+      padding-bottom: 24px;
     }
 
     a {
       display: block;
-      padding: 13px 0;
+      padding: 12px 0;
       border-bottom: 1px solid rgba(255, 255, 255, 0.09);
       color: var(--chalk);
       font-family: var(--font-archivo), sans-serif;
       font-weight: 800;
-      font-size: 15px;
+      font-size: 14px;
       text-transform: uppercase;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.02em;
       text-decoration: none;
+      transition: color 0.15s ease;
 
       &.act {
         color: var(--amber);
         border-bottom-color: rgba(245, 179, 28, 0.35);
+      }
+
+      &:hover {
+        color: var(--amber);
       }
     }
 
@@ -135,7 +163,8 @@
         flex: 1;
         text-align: center;
         border-bottom: none;
-        padding: 12px 10px;
+        padding: 11px 8px;
+        font-size: 12px;
       }
     }
 
@@ -154,15 +183,20 @@
         background: rgba(255, 255, 255, 0.05);
         border-left: 3px solid var(--amber);
         margin-bottom: 8px;
+        border-radius: 0 4px 4px 0;
 
         a {
-          padding: 11px 0 11px 14px;
+          padding: 10px 0 10px 14px;
           font-family: var(--font-archivo), sans-serif;
           font-weight: 600;
-          font-size: 13px;
+          font-size: 12.5px;
           text-transform: none;
           color: #c9d4de;
           border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+          &:last-child {
+            border-bottom: none;
+          }
 
           &:hover,
           &:focus-visible {
@@ -173,31 +207,32 @@
     }
   }
 
-  /* Keep the header pinned on touch devices so the drawer stacks cleanly */
   header.site {
     position: sticky;
     top: 0;
 
     .wrap {
       gap: 12px;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-top: 8px;
+      padding-bottom: 8px;
     }
-
-    .lockup img.site-logo {
-      height: 44px;
-    }
-  }
-
-  .cartbtn {
-    margin-left: auto;
-    padding: 9px 12px;
   }
 }
 
 @media (max-width: 860px) {
   /* Keep the drawer's CTAs clear of the sticky bottom bar */
   .mnavdrop .wrap {
-    padding-bottom: 64px;
+    padding-bottom: 74px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mnavdrop .mnavcta {
+    flex-direction: column;
+    gap: 8px;
+
+    a {
+      width: 100%;
+    }
   }
 }

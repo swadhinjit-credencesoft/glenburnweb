@@ -4,24 +4,50 @@
   padding: 0;
 }
 
+html,
 body {
-  background: #2a2d30;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body {
+  background: var(--concrete);
   font-family: var(--font-barlow), system-ui, sans-serif;
   color: var(--carbon);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  max-width: 100%;
 }
 
 button {
-  font-family: inherit;
   cursor: pointer;
   border: none;
 }
 
 a {
   color: inherit;
-}
-
-img {
-  max-width: 100%;
-  display: block;
+  text-decoration: none;
 }

@@ -12,14 +12,14 @@ export default function Topbar({
   return (
     <div className="topbar">
       <div className="wrap">
-        <span>
+        <span className="topbar-left">
           {left ?? (
             <>
               📍 {SITE.address}, Avondale
             </>
           )}
         </span>
-        <span className="mono">
+        <span className="topbar-right mono">
           {right ?? (
             <a href={SITE.phoneHref} className="phone-link" title={`Call Glenburn Tyres on ${SITE.phone}`}>
               📞 <strong>{SITE.phone}</strong>
@@ -44,9 +44,9 @@ export function BookTopbar() {
           <a href={SITE.phoneHref} className="phone-link" title={`Call Glenburn Tyres on ${SITE.phone}`}>
             📞 <strong>{SITE.phone}</strong>
           </a>
-          &nbsp;·&nbsp;{" "}
+          <span style={{ opacity: 0.5 }}>·</span>
           <Link href="/book" className="bk">
-            📅 Book an appointment
+            📅 Book appointment
           </Link>
         </>
       }

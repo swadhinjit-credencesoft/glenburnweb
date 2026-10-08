@@ -1,50 +1,55 @@
 .conf {
-  padding: 52px 0;
+  padding: clamp(32px, 5vw, 48px) 0;
   text-align: center;
+  width: 100%;
 }
 
 .conftick {
-  width: 72px;
-  height: 72px;
+  width: clamp(56px, 10vw, 72px);
+  height: clamp(56px, 10vw, 72px);
   border-radius: 50%;
   background: var(--green);
   display: grid;
   place-items: center;
-  margin: 0 auto 20px;
+  margin: 0 auto 16px;
   color: #fff;
-  font-size: 34px;
+  font-size: clamp(26px, 5vw, 34px);
 }
 
 .conf h1 {
-  font-size: clamp(28px, 4.6vw, 44px);
+  font-size: clamp(24px, 4.2vw, 40px);
   font-weight: 900;
   text-transform: uppercase;
+  line-height: 1.2;
 }
 
 .conf .ref {
   font-family: var(--font-plexmono), monospace;
-  font-size: 13.5px;
-  letter-spacing: 0.16em;
+  font-size: clamp(12px, 2vw, 13.5px);
+  letter-spacing: 0.14em;
   color: var(--muted);
-  margin-top: 11px;
+  margin-top: 10px;
 }
 
 .confcard {
   background: var(--chalk);
   border: 2px solid var(--deep);
   max-width: 610px;
-  margin: 28px auto 0;
+  width: 100%;
+  margin: 24px auto 0;
   text-align: left;
+  border-radius: 4px;
+  overflow: hidden;
 
   .ch {
     background: var(--deep);
     color: var(--chalk);
-    padding: 16px 22px;
+    padding: 14px 18px;
 
     .k {
       font-family: var(--font-plexmono), monospace;
-      font-size: 10px;
-      letter-spacing: 0.18em;
+      font-size: 9.5px;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--amber);
     }
@@ -52,9 +57,9 @@
     .v {
       font-family: var(--font-archivo), sans-serif;
       font-weight: 900;
-      font-size: 23px;
+      font-size: clamp(18px, 3vw, 22px);
       text-transform: uppercase;
-      margin-top: 5px;
+      margin-top: 4px;
     }
   }
 }
@@ -62,10 +67,11 @@
 .confrow {
   display: flex;
   justify-content: space-between;
-  gap: 14px;
-  padding: 13px 22px;
+  gap: 12px;
+  padding: 12px 18px;
   border-bottom: 1px solid var(--line);
-  font-size: 14px;
+  font-size: 13.5px;
+  flex-wrap: wrap;
 
   &:last-child {
     border: none;
@@ -73,6 +79,7 @@
 
   .k {
     color: var(--muted);
+    flex-shrink: 0;
   }
 
   .v {
@@ -80,5 +87,7 @@
     font-size: 13px;
     text-align: right;
     font-weight: 500;
+    margin-left: auto;
+    word-break: break-word;
   }
 }

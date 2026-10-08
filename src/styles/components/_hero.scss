@@ -2,6 +2,7 @@
   position: relative;
   color: var(--chalk);
   overflow: hidden;
+  width: 100%;
 
   .bg {
     position: absolute;
@@ -26,26 +27,27 @@
   .wrap {
     position: relative;
     z-index: 2;
-    padding-top: 52px;
-    padding-bottom: 0;
+    padding-top: clamp(32px, 5vw, 56px);
+    padding-bottom: clamp(32px, 5vw, 56px);
   }
 }
 
 .eyebrow {
   font-family: var(--font-plexmono), monospace;
-  font-size: 10.5px;
+  font-size: clamp(9.5px, 1.8vw, 11px);
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--amber);
 }
 
 .phero h1 {
-  font-size: clamp(31px, 4.5vw, 50px);
+  font-size: clamp(24px, 4.4vw, 48px);
   font-weight: 900;
   text-transform: uppercase;
-  margin: 14px 0 0;
-  max-width: 21ch;
+  margin: 12px 0 0;
+  max-width: 24ch;
+  line-height: 1.15;
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
 
   em {
@@ -55,46 +57,62 @@
 }
 
 .phero .sub {
-  margin-top: 16px;
-  font-size: 17.5px;
+  margin-top: 14px;
+  font-size: clamp(14.5px, 2vw, 17px);
   font-weight: 300;
+  line-height: 1.55;
   color: #d3dce3;
-  max-width: 50ch;
+  max-width: 54ch;
 }
 
 .hctas {
   display: flex;
-  gap: 11px;
+  gap: 10px;
   flex-wrap: wrap;
-  margin-top: 26px;
+  margin-top: 24px;
+  width: 100%;
+
+  @media (max-width: 540px) {
+    flex-direction: column;
+    gap: 8px;
+
+    .btn {
+      width: 100%;
+    }
+  }
 }
 
 .badges {
   display: flex;
-  gap: 9px;
+  gap: 8px;
   flex-wrap: wrap;
-  margin-top: 28px;
+  margin-top: 24px;
+  width: 100%;
 }
 
 .badge2 {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
   background: rgba(255, 255, 255, 0.09);
   border: 1px solid rgba(255, 255, 255, 0.22);
-  padding: 9px 14px;
+  padding: 8px 12px;
   backdrop-filter: blur(3px);
+  border-radius: 3px;
+  max-width: 100%;
 
   b {
     font-family: var(--font-archivo), sans-serif;
     font-weight: 800;
-    font-size: 13px;
+    font-size: clamp(11.5px, 2vw, 13px);
     color: var(--chalk);
+    white-space: nowrap;
   }
 
   span {
-    font-size: 12px;
+    font-size: clamp(11px, 1.8vw, 12px);
     color: #b9c6d2;
+    white-space: nowrap;
   }
 }
 

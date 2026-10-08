@@ -1,29 +1,32 @@
 .pagehead {
   background: var(--deep);
   color: var(--chalk);
-  padding: 26px 0;
+  padding: clamp(18px, 3.5vw, 26px) 0;
 
   .crumb {
     font-family: var(--font-plexmono), monospace;
-    font-size: 10.5px;
+    font-size: clamp(9.5px, 1.2vw, 10.5px);
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: #7e93a6;
+    word-break: break-word;
   }
 
   h1 {
-    font-size: clamp(25px, 3.8vw, 38px);
+    font-size: clamp(22px, 3.8vw, 38px);
     font-weight: 900;
     text-transform: uppercase;
     margin-top: 9px;
     max-width: 22ch;
+    word-wrap: break-word;
   }
 
   .vh {
     margin-top: 10px;
-    font-size: 15px;
+    font-size: clamp(13.5px, 1.8vw, 15px);
     color: #b9c6d2;
     max-width: 62ch;
+    line-height: 1.45;
 
     b {
       color: var(--amber);
@@ -32,3 +35,4 @@
     }
   }
 }
+
