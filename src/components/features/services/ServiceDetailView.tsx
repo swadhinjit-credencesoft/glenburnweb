@@ -18,6 +18,13 @@ const LABELS: Record<string, string> = {
   "shock-shop": "Shock Shop & Suspension",
 };
 
+const SVC_ICONS: Record<string, string> = {
+  "tyre-fitting": "🛞",
+  "wheel-alignment": "🎯",
+  "puncture-repair": "🧰",
+  "shock-shop": "🛠️",
+};
+
 export default function ServiceDetailView({
   service,
 }: {
@@ -64,6 +71,9 @@ export default function ServiceDetailView({
         <div className="wrap">
           <div className="service-card-block">
             <div className="service-meta-bar">
+              <span className={`service-mark ${service.amber ? "amber" : ""}`}>
+                {SVC_ICONS[service.id] ?? "🔧"}
+              </span>
               <span className={`service-eyebrow ${service.amber ? "amber" : ""}`}>
                 {service.eyebrow}
               </span>

@@ -679,3 +679,463 @@
     }
   }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   Premium UI upgrade — /services hub + individual service pages
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── Hub cards ───────────────────────────────────────────────── */
+
+.service-hub-grid {
+  gap: 24px;
+}
+
+.service-hub-card {
+  border-radius: 12px;
+  background: linear-gradient(180deg, #ffffff 0%, #fbfaf7 100%);
+  box-shadow: 0 4px 16px rgba(11, 43, 69, 0.06);
+  padding: 26px 26px 22px;
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -44px;
+    bottom: -44px;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(20, 73, 110, 0.09), transparent 70%);
+    pointer-events: none;
+  }
+
+  &.amber::after {
+    background: radial-gradient(circle, rgba(245, 179, 28, 0.12), transparent 70%);
+  }
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-5px);
+    box-shadow: 0 26px 54px rgba(11, 43, 69, 0.18);
+  }
+
+  .hub-meta {
+    margin-bottom: 16px;
+  }
+
+  .code-badge {
+    border-radius: 99px;
+    padding: 5px 11px;
+    font-size: 10.5px;
+  }
+
+  .hub-price {
+    border-radius: 99px;
+    padding: 5px 11px;
+    font-size: 12px;
+    background: var(--deep);
+    color: #ffffff;
+  }
+
+  .hub-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    background: linear-gradient(135deg, #14496e, #0b2b45);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18),
+      0 8px 18px rgba(11, 43, 69, 0.28);
+    margin-bottom: 16px;
+
+    &.amber {
+      background: linear-gradient(135deg, #f5b31c, #d89a0c);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25),
+        0 8px 18px rgba(245, 179, 28, 0.32);
+    }
+  }
+
+  .hub-eyebrow {
+    font-size: 10px;
+    color: var(--blue);
+    font-weight: 600;
+  }
+
+  .hub-title {
+    font-size: 22px;
+    letter-spacing: -0.01em;
+  }
+
+  .hub-body {
+    font-size: 14.5px;
+  }
+
+  .hub-included {
+    li {
+      font-size: 13.5px;
+      color: #3a4046;
+
+      &::before {
+        content: "";
+        left: 0;
+        top: 2px;
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        background: rgba(20, 73, 110, 0.1);
+        color: var(--blue);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        font-weight: 900;
+      }
+
+      &::after {
+        content: "✓";
+        position: absolute;
+        left: 3px;
+        top: 5px;
+        color: var(--blue);
+        font-size: 10px;
+        font-weight: 900;
+      }
+    }
+  }
+
+  .hub-foot {
+    border-top: 1px solid var(--line);
+    margin-top: 4px;
+
+    .hub-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--blue);
+      font-size: 13px;
+
+      &::after {
+        content: "→";
+        transition: transform 0.18s ease;
+      }
+    }
+
+    .hub-count {
+      background: var(--chalk);
+      border: 1px solid var(--line);
+      border-radius: 99px;
+      padding: 4px 10px;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+    }
+  }
+
+  &:hover .hub-cta::after {
+    transform: translateX(4px);
+  }
+}
+
+/* ── Individual service page hero ────────────────────────────── */
+
+.service-meta-bar {
+  align-items: center;
+  margin-bottom: 16px;
+
+  .service-mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 21px;
+    background: linear-gradient(135deg, #14496e, #0b2b45);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.18),
+      0 8px 16px rgba(11, 43, 69, 0.24);
+
+    &.amber {
+      background: linear-gradient(135deg, #f5b31c, #d89a0c);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25),
+        0 8px 16px rgba(245, 179, 28, 0.3);
+    }
+  }
+
+  .service-eyebrow {
+    border-radius: 99px;
+    padding: 6px 12px;
+    margin-left: 4px;
+  }
+
+  .service-price-tag {
+    margin-left: auto;
+    border-radius: 99px;
+    padding: 7px 14px;
+    font-size: 13px;
+    background: var(--deep);
+    color: #ffffff;
+  }
+}
+
+.service-main-heading {
+  letter-spacing: -0.015em;
+}
+
+.service-lead-body {
+  margin-bottom: 26px;
+}
+
+/* ── Highlight stat chips ────────────────────────────────────── */
+
+.service-highlights-row {
+  gap: 12px;
+
+  .highlight-chip {
+    background: linear-gradient(180deg, #ffffff, #f6f4ef);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 13px 15px;
+    box-shadow: 0 3px 10px rgba(11, 43, 69, 0.05);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--blue);
+      border-radius: 99px;
+    }
+
+    .hl-label {
+      font-size: 9px;
+      color: var(--blue);
+    }
+
+    .hl-val {
+      font-size: 14px;
+    }
+  }
+}
+
+/* ── Content panels ──────────────────────────────────────────── */
+
+.service-panel {
+  border-radius: 12px;
+  padding: clamp(20px, 3vw, 28px);
+  box-shadow: 0 10px 28px rgba(11, 43, 69, 0.07);
+  border: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+
+  h3 {
+    font-size: 15px;
+    border-bottom: none;
+    padding-bottom: 4px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 3px;
+      border-radius: 99px;
+      background: var(--amber);
+      margin-top: 10px;
+    }
+  }
+}
+
+.whats-included-list {
+  li {
+    font-size: 14px;
+
+    &::before {
+      background: rgba(30, 122, 70, 0.12);
+    }
+  }
+}
+
+/* ── Expert guide cards ──────────────────────────────────────── */
+
+.expert-insights-block {
+  gap: 16px;
+}
+
+.expert-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f7f5f0 100%);
+  border: 1px solid var(--line);
+  border-left: none;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 3px 12px rgba(11, 43, 69, 0.06);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--blue);
+    border-radius: 99px;
+  }
+
+  &.amber::before {
+    background: var(--amber);
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(11, 43, 69, 0.12);
+  }
+
+  h4 {
+    font-size: 13.5px;
+    letter-spacing: 0.01em;
+    color: var(--blue);
+  }
+
+  &.amber h4 {
+    color: #946800;
+  }
+
+  p {
+    font-size: 13px;
+  }
+}
+
+/* ── Brand grid ──────────────────────────────────────────────── */
+
+.structured-brand-grid {
+  .brand-card-item {
+    border-radius: 10px;
+    background: linear-gradient(180deg, #ffffff, #f6f4ef);
+    box-shadow: 0 2px 8px rgba(11, 43, 69, 0.05);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(11, 43, 69, 0.12);
+    }
+  }
+}
+
+/* ── CTA cluster ─────────────────────────────────────────────── */
+
+.service-cta-cluster {
+  .cta-buttons .btn {
+    border-radius: 8px;
+  }
+
+  .cta-help-text {
+    font-size: 12.5px;
+  }
+}
+
+/* ── Booking band ────────────────────────────────────────────── */
+
+.service-booking-section {
+  background: linear-gradient(135deg, #0b2b45 0%, #10314d 55%, #17405f 100%);
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -70px;
+    bottom: -70px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(245, 179, 28, 0.16), transparent 62%);
+    pointer-events: none;
+  }
+}
+
+.service-booking-card {
+  border-radius: 12px;
+  border-top-width: 4px;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.34);
+
+  .payopt {
+    border-radius: 8px;
+  }
+
+  .qbtn {
+    border-radius: 8px;
+  }
+
+  .field input,
+  .field textarea {
+    border-radius: 8px;
+    border: 1.5px solid var(--line);
+    background: #fff;
+  }
+
+  .booking-badge {
+    letter-spacing: 0.01em;
+  }
+}
+
+/* ── Related services ────────────────────────────────────────── */
+
+.related-link {
+  border-radius: 12px;
+  border-left: none;
+  padding: 20px;
+  background: linear-gradient(180deg, #ffffff, #fbfaf7);
+  border: 1px solid var(--line);
+  box-shadow: 0 3px 12px rgba(11, 43, 69, 0.06);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--blue);
+    border-radius: 99px;
+    transition: width 0.18s ease;
+  }
+
+  .related-title {
+    font-size: 16px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 34px rgba(11, 43, 69, 0.14);
+  }
+}
+
+/* ── Small-screen polish ─────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .service-hub-card {
+    padding: 22px 20px 18px;
+
+    .hub-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 19px;
+    }
+  }
+
+  .service-panel {
+    padding: 20px 18px;
+  }
+
+  .expert-card {
+    padding: 16px 16px;
+  }
+}

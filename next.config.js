@@ -12,6 +12,10 @@ const nextConfig = {
   // `.next` so the static export still lands in `out/`.
   ...(process.argv.includes("dev") ? { distDir: ".next-dev" } : {}),
   images: { unoptimized: true },
+  // Static export doesn't need server bundles traced; skipping ".nft.json"
+  // collection avoids a flaky race (ENOENT on _app.js.nft.json /
+  // PageNotFoundError: /_document) during `collect-build-traces`.
+  outputFileTracing: false,
   sassOptions: {
     includePaths: [path.join(__dirname, "src", "styles")],
   },

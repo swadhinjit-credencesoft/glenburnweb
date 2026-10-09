@@ -17,6 +17,13 @@ const LABELS: Record<string, string> = {
   "shock-shop": "Shock Shop & Suspension",
 };
 
+const HUB_ICONS: Record<string, string> = {
+  "tyre-fitting": "🛞",
+  "wheel-alignment": "🎯",
+  "puncture-repair": "🧰",
+  "shock-shop": "🛠️",
+};
+
 export default function ServicesView() {
   const servicesSchema = {
     "@context": "https://schema.org",
@@ -82,6 +89,10 @@ export default function ServicesView() {
                   </span>
                   <span className="hub-price">{s.price}</span>
                 </div>
+
+                <span className={`hub-icon${s.amber ? " amber" : ""}`}>
+                  {HUB_ICONS[s.id] ?? "🔧"}
+                </span>
 
                 <span className="hub-eyebrow">{s.eyebrow}</span>
                 <h2 className="hub-title">{s.title}</h2>
