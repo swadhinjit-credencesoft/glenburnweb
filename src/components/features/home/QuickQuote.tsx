@@ -53,7 +53,7 @@ export default function QuickQuote() {
           <label>&nbsp;</label>
           <button
             className="btn btn-p"
-            onClick={() => router.push("/tyres")}
+            onClick={() => router.push("/services/tyre-fitting")}
           >
             Get my price →
           </button>

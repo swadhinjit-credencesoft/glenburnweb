@@ -28,11 +28,11 @@ export default function HomeView() {
 
       <PhotoHero
           image="/images/workshop.jpg"
-          eyebrow="Independent · Avondale · Since 1989"
+          eyebrow="Independent · Avondale · Since 1982"
           title={
             <>
               Trusted independent tyre &amp; wheel specialists in{" "}
-              <em>Avondale</em> since 1989
+              <em>Avondale</em> since 1982
             </>
           }
           sub="Get premium safety, honest Kiwi advice, and unbeatable local service. Serving West Auckland driver-to-driver for over 35 years."
@@ -181,7 +181,7 @@ export default function HomeView() {
       </div>
 
       {/* NOTE — client to confirm before launch: content doc lists (09) 828 4180,
-          street signage reads (09) 828 8341. Site standardized on (09) 828 4180. */}
+          street signage reads (09)828 8341. Site standardized on (09) 828 4180. */}
 
       <SiteFooter variant="full" />
     </>

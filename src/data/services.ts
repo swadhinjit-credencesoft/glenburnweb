@@ -51,7 +51,7 @@ export const SERVICES: ServiceItem[] = [
     ],
     highlights: [
       { label: "Fitting Turnaround", value: "30–45 mins" },
-      { label: "Price Range", value: "From $89 fitted" },
+      { label: "Price Range", value: "From $129 fitted" },
       { label: "Vehicle Types", value: "Cars, SUVs, EVs, 4x4s, Vans" },
     ],
     expertSections: [
@@ -71,9 +71,9 @@ export const SERVICES: ServiceItem[] = [
           "Improper tyre fitting can cause micro-vibrations, rim damage, and rapid shoulder wear. At our Avondale workshop, our technicians use rim-safe touchless mounting equipment, replace all valve stems, and precision-balance every wheel to factory tolerances before torquing wheel nuts to exact manufacturer specifications.",
       },
     ],
-    price: "From $89 fitted",
-    href: "/tyres",
-    cta: "Browse Tyres Online",
+    price: "From $129 fitted",
+    href: "/book",
+    cta: "Book Tyre Fitting",
     amber: false,
   },
   {
@@ -196,7 +196,7 @@ export const SERVICES: ServiceItem[] = [
           "Carrying heavy tools, carrying canopy setups, or hitting off-road trails in West Auckland? We install premium suspension upgrades for Ford Ranger, Toyota Hilux, Isuzu D-Max, Nissan Navara, and Mitsubishi Triton. From 2-inch lift kits to heavy-duty rear leaf springs, we ensure optimal ground clearance, load stability, and ride comfort.",
       },
     ],
-    price: "Free inspection",
+    price: "inspection",
     href: "/shock-shop",
     cta: "Shock Shop Details",
     amber: true,

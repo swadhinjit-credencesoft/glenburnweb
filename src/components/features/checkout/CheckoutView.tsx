@@ -170,7 +170,7 @@ export default function CheckoutView() {
                     <button
                       className="btn btn-o btn-sm"
                       style={{ marginTop: 11 }}
-                      onClick={() => router.push("/tyres/bluearth-gt-ae51")}
+                      onClick={() => router.push("/book")}
                     >
                       Change slot
                     </button>

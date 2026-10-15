@@ -50,8 +50,8 @@ export default function LocationsIndexView() {
             <Link href="/book" className="btn btn-p">
               Book a fitting
             </Link>
-            <Link href="/tyres" className="btn btn-o">
-              Browse tyre prices
+            <Link href="/services/tyre-fitting" className="btn btn-o">
+              See tyre fitting &amp; prices
             </Link>
             <a href={SITE.phoneHref} className="btn btn-o">
               📞 Call {SITE.phone}

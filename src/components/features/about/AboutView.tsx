@@ -24,7 +24,7 @@ export default function AboutView() {
             35 years on the tools in <em>West Auckland</em>
           </>
         }
-        sub="Founded in 1989, Glenburn Tyres was built on a simple promise: honest service, expert advice, and treating every customer like a neighbour. Over 35 years later, Aveen and the team continue that legacy at 1/61 Wolverton Street, Avondale."
+        sub="Founded in 1982, Glenburn Tyres was built on a simple promise: honest service, expert advice, and treating every customer like a neighbour. Over 35 years later, Aveen and the team continue that legacy at 1/61 Wolverton Street, Avondale."
       />
 
       <div className="sec">
@@ -34,7 +34,7 @@ export default function AboutView() {
             <p>
               Step inside and you&apos;ll find a proper four-bay workshop run by
               people who treat every car like their own — the blue building
-              Avondale drivers have trusted since 1989.
+              Avondale drivers have trusted since 1982.
             </p>
           </div>
           <div className="grid g3">

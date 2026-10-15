@@ -34,12 +34,12 @@ export default function SiteFooter(
             </div>
             <p style={{ fontSize: 13, fontWeight: 300, maxWidth: "34ch" }}>
               Independent tyre, wheel and suspension specialists in Avondale
-              since 1989. Official Central West Shock Shop franchise.
+              since 1982. Official Central West Shock Shop franchise.
             </p>
           </div>
           <div>
             <h4>Services</h4>
-            <Link href="/tyres">Tyre fitting &amp; supply</Link>
+            <Link href="/services/tyre-fitting">Tyre fitting &amp; supply</Link>
             <Link href="/book">3D laser wheel alignment</Link>
             <Link href="/book">Puncture repair</Link>
             <Link href="/shock-shop">Central West Shock Shop</Link>

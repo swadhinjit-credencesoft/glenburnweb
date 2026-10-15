@@ -25,7 +25,7 @@
 ## 1. Project Overview
 
 **What the site is:**
-Glenburn Tyre Service Ltd is an independent tyre, wheel alignment, and suspension workshop operating since 1989 (35+ years). It is an MTA-assured workshop and the official **Central West Shock Shop** franchise. The website serves as a marketing/lead-generation and self-service booking tool for West Auckland drivers.
+Glenburn Tyre Service Ltd is an independent tyre, wheel alignment, and suspension workshop operating since 1982 (35+ years). It is an MTA-assured workshop and the official **Central West Shock Shop** franchise. The website serves as a marketing/lead-generation and self-service booking tool for West Auckland drivers.
 
 ### Tech Stack
 
@@ -711,7 +711,7 @@ const sorted = useMemo(() => {
 
 **File:** `src/data/site.ts`
 
-**Problem:** `SITE.phoneHref` contains `"tel:+9348632268"` which is an invalid phone number. The displayed number `(09) 828 4180` in the NZ format corresponds to `tel:+6498284180`. Additionally, a code comment in `HomeView.tsx` flags a discrepancy between the content document (`(09) 828 4180`) and street signage (`(09) 828 8341`) — the client needs to confirm the correct number before launch.
+**Problem:** `SITE.phoneHref` contains `"tel:+9348632268"` which is an invalid phone number. The displayed number `(09) 828 4180` in the NZ format corresponds to `tel:+6498284180`. Additionally, a code comment in `HomeView.tsx` flags a discrepancy between the content document (`(09) 828 4180`) and street signage (`(09)828 8341`) — the client needs to confirm the correct number before launch.
 
 **Fix required:** Update `SITE.phoneHref` to `"tel:+6498284180"` (or whichever number is confirmed correct).
 
@@ -805,7 +805,7 @@ The general booking form (Step 4: contact details) has no validation before navi
 
 ```
 // NOTE — client to confirm before launch: content doc lists (09) 828 4180,
-//        street signage reads (09) 828 8341. Site standardized on (09) 828 4180.
+//        street signage reads (09)828 8341. Site standardized on (09) 828 4180.
 ```
 
 The correct business phone number needs to be confirmed with the client before launch and updated consistently across all references.

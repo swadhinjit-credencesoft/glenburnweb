@@ -2,8 +2,13 @@ import type { NavItem, ProtoTab } from "@/types";
 
 export const PROTO_TABS: ProtoTab[] = [
   { id: "home", num: "01", label: "Home", href: "/" },
-  { id: "results", num: "02", label: "Tyre results", href: "/tyres" },
-  { id: "pdp", num: "03", label: "Product + booking", href: "/tyres/bluearth-gt-ae51" },
+  { id: "services", num: "02", label: "Services", href: "/services" },
+  {
+    id: "service",
+    num: "03",
+    label: "Service booking",
+    href: "/services/tyre-fitting",
+  },
   { id: "checkout", num: "04", label: "Checkout", href: "/checkout" },
   { id: "conf", num: "05", label: "Confirmation", href: "/confirmation" },
   { id: "shock", num: "06", label: "Shock Shop", href: "/shock-shop" },
@@ -37,7 +42,6 @@ export const SERVICE_NAV = [
 ];
 
 export const MAIN_NAV: NavItem[] = [
-  { label: "Tyres", href: "/tyres" },
   { label: "Services", href: "/services", children: SERVICE_NAV },
   { label: "Shock Shop", href: "/shock-shop" },
   { label: "Areas", href: "/locations" },

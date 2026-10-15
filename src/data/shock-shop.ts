@@ -1,9 +1,6 @@
 export const HERO_BRANDS = [
   "Bilstein",
-  "Tein",
   "Monroe",
-  "Sabre Pro-Series",
-  "Coil springs & sway bars",
 ];
 
 export const SIGNS = [
@@ -36,7 +33,7 @@ export const SIGNS = [
 export const PROCESS = [
   {
     code: "01 · DIAGNOSE",
-    title: "Free inspection",
+    title: "inspection",
     body: "Bounce test, visual on all four corners, and a look at bushes, tie rods and sway bar links. You get a written finding, not a sales pitch.",
     price: "No charge",
   },

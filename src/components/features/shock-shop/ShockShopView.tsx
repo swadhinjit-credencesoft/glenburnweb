@@ -32,7 +32,7 @@ export default function ShockShopView() {
       >
         <div className="hctas">
           <Link href="/book" className="btn btn-p">
-            Book a free suspension check
+            Book a suspension check
           </Link>
           <a href={SITE.phoneHref} className="btn btn-phone-light">📞 Call {SITE.phone}</a>
         </div>

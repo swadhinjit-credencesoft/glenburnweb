@@ -258,7 +258,7 @@ export default function BookingView() {
               <div className="ti" />
               <div>
                 <div className="nm">35 years local</div>
-                <div className="mt">Independent since 1989</div>
+                <div className="mt">Independent since 1982</div>
               </div>
             </div>
             <div className="legal">
@@ -277,9 +277,9 @@ export default function BookingView() {
               <button
                 className="btn btn-o btn-sm"
                 style={{ width: "100%" }}
-                onClick={() => router.push("/tyres")}
+                onClick={() => router.push("/services/tyre-fitting")}
               >
-                Or price tyres yourself →
+                See tyre fitting &amp; prices →
               </button>
             </div>
           </aside>

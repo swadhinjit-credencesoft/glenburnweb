@@ -10,7 +10,7 @@ export const FAQ_GROUPS: FaqGroup[] = [
       },
       {
         q: "How long has Glenburn Tyres been operating in Avondale?",
-        a: "Glenburn Tyres has been locally owned and operated in Avondale for over 35 years (since 1989). We are proud to be one of West Auckland's longest-standing independent tyre and automotive safety specialists.",
+        a: "Glenburn Tyres has been locally owned and operated in Avondale for over 35 years (since 1982). We are proud to be one of West Auckland's longest-standing independent tyre and automotive safety specialists.",
       },
       // {
       //   q: "Is Glenburn Tyres MTA assured?",

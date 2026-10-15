@@ -8,7 +8,7 @@ export default function MobileNav() {
     <nav className="mobilenav" aria-label="Mobile quick actions">
       <a href={SITE.phoneHref} className="mn-item mn-call" title={`Call Glenburn Tyres directly on ${SITE.phone}`}>
         <span className="mn-icon">📞</span>
-        <span style={{ fontWeight: 800, color: "var(--amber)", fontSize: "11px" }}>Call (09) 828 4180</span>
+        <span style={{ fontWeight: 800, color: "var(--amber)", fontSize: "11px" }}>Call {SITE.phone}</span>
       </a>
       <Link href="/book" className="mn-item">
         <span className="mn-icon">📅</span>

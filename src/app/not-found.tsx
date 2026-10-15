@@ -63,8 +63,8 @@ export default function NotFound() {
           <Link href="/" className="btn btn-p">
             Back to home
           </Link>
-          <Link href="/tyres" className="btn btn-o">
-            Browse tyres
+          <Link href="/services/tyre-fitting" className="btn btn-o">
+            Browse services
           </Link>
           <Link href="/book" className="btn btn-o">
             Book a service
