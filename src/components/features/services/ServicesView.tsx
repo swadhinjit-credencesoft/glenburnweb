@@ -142,7 +142,7 @@ export default function ServicesView() {
             }}
           >
             <Link href="/book" className="btn btn-p">
-              Book a Free Safety Inspection
+              Book a Safety Inspection
             </Link>
             <a href={SITE.phoneHref} className="btn btn-phone-light">
               📞 Call {SITE.phone}

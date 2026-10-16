@@ -6,12 +6,14 @@ import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
 import { MAIN_NAV } from "@/data/navigation";
 import PageHead from "@/components/ui/PageHead";
-import { BOOKING_SERVICES } from "@/data/booking";
+import { BOOKING_SERVICES, BOOKING_SLOTS } from "@/data/booking";
 import { SITE } from "@/data/site";
 import { toAmPm } from "@/lib/format";
 import {
   setBookingField,
+  setBookingSlot,
   setTimeOfDay,
+  submitBooking,
   toggleService,
 } from "@/store/slices/bookingSlice";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
@@ -150,6 +152,23 @@ export default function BookingView() {
                     </div>
                   </div>
                 </div>
+                <div className="field">
+                  <label>Pick a time</label>
+                  <div className="slotgrid">
+                    {[...BOOKING_SLOTS.morning, ...BOOKING_SLOTS.afternoon].map(
+                      (t) => (
+                        <button
+                          key={t}
+                          type="button"
+                          className={`slot${booking.slot === t ? " on" : ""}`}
+                          onClick={() => dispatch(setBookingSlot(t))}
+                        >
+                          <span className="d">{t}</span>
+                        </button>
+                      )
+                    )}
+                  </div>
+                </div>
                 <p style={{ fontSize: 12.5, color: "var(--muted)" }}>
                   Saturday mornings only, {toAmPm(sat.open)} –{" "}
                   {toAmPm(sat.close)}. Closed Sunday and public holidays.
@@ -225,7 +244,10 @@ export default function BookingView() {
             <button
               className="btn btn-p"
               style={{ width: "100%" }}
-              onClick={() => router.push("/confirmation")}
+              onClick={() => {
+                dispatch(submitBooking());
+                router.push("/confirmation");
+              }}
             >
               🚀 Submit booking request
             </button>

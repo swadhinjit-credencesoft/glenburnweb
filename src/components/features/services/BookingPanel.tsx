@@ -3,12 +3,14 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { BOOKING_SERVICES } from "@/data/booking";
+import { BOOKING_SERVICES, BOOKING_SLOTS } from "@/data/booking";
 import { SITE } from "@/data/site";
 import { toAmPm } from "@/lib/format";
 import {
   setBookingField,
+  setBookingSlot,
   setTimeOfDay,
+  submitBooking,
   toggleService,
 } from "@/store/slices/bookingSlice";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
@@ -118,6 +120,22 @@ export default function BookingPanel({ serviceId }: { serviceId: string }) {
       </div>
 
       <div className="field">
+        <label>Pick a time</label>
+        <div className="slotgrid">
+          {[...BOOKING_SLOTS.morning, ...BOOKING_SLOTS.afternoon].map((t) => (
+            <button
+              key={t}
+              type="button"
+              className={`slot${booking.slot === t ? " on" : ""}`}
+              onClick={() => dispatch(setBookingSlot(t))}
+            >
+              <span className="d">{t}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div className="field">
         <label>Vehicle – make, model &amp; year</label>
         <input placeholder="Mazda CX-5, 2019" {...field("vehicle")} />
       </div>
@@ -151,7 +169,10 @@ export default function BookingPanel({ serviceId }: { serviceId: string }) {
       <button
         className="btn btn-p"
         style={{ width: "100%" }}
-        onClick={() => router.push("/confirmation")}
+        onClick={() => {
+          dispatch(submitBooking());
+          router.push("/confirmation");
+        }}
       >
         🚀 Submit booking request
       </button>

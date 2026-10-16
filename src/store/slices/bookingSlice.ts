@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import type { BookingState } from "@/data/booking";
-import { INITIAL_BOOKING } from "@/data/booking";
+import { BOOKING_SLOTS, INITIAL_BOOKING } from "@/data/booking";
 export type { BookingState } from "@/data/booking";
 
 const initialState: BookingState = INITIAL_BOOKING;
@@ -21,10 +21,25 @@ const bookingSlice = createSlice({
     },
     setTimeOfDay(state, action: PayloadAction<"morning" | "afternoon">) {
       state.timeOfDay = action.payload;
+      state.slot = BOOKING_SLOTS[action.payload][0];
+    },
+    setBookingSlot(state, action: PayloadAction<string>) {
+      state.slot = action.payload;
+      state.timeOfDay = BOOKING_SLOTS.afternoon.includes(action.payload)
+        ? "afternoon"
+        : "morning";
+    },
+    submitBooking(state) {
+      state.submitted = true;
     },
   },
 });
 
-export const { setBookingField, toggleService, setTimeOfDay } =
-  bookingSlice.actions;
+export const {
+  setBookingField,
+  toggleService,
+  setTimeOfDay,
+  setBookingSlot,
+  submitBooking,
+} = bookingSlice.actions;
 export default bookingSlice.reducer;

@@ -20,7 +20,7 @@ export default function SiteFooter(
             >
               <img
                 className="site-logo"
-                src="/images/glenburnlogo.png"
+                src="/images/logo2.png"
                 alt="Glenburn Tyres"
                 style={{
                   maxHeight: 48,

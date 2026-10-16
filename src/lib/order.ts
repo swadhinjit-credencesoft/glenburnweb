@@ -1,6 +1,7 @@
 import type { CheckoutState } from "@/data/checkout";
 import type { ProductState } from "@/data/product";
 import type { QuoteItem } from "@/data/quote";
+import type { BookingState } from "@/data/booking";
 import { PAYMENT_OPTIONS } from "@/data/checkout";
 import { SITE } from "@/data/site";
 import { PDP_DETAIL } from "@/data/tyres";
@@ -95,6 +96,26 @@ export function buildOrderMessage(p: OrderPayload): string {
     `Tyre Stewardship Fee (${t.qty} x ${money(STEWARDSHIP_EACH)}): ${money(t.stewardship)}`,
     `Total: ${money(t.total)}`,
     `Payment: ${paymentLabel(c.payment)}`,
+  ];
+  return parts.filter((l): l is string => l !== null).join("\n");
+}
+
+export function buildBookingMessage(b: BookingState): string {
+  const services = Object.keys(b.services).filter((k) => b.services[k]);
+  const vehicle =
+    [b.plate.trim(), b.vehicle.trim()].filter(Boolean).join(" — ") || "—";
+  const parts: Array<string | null> = [
+    "NEW BOOKING — Glenburn Tyres",
+    `Name: ${b.fullName.trim() || "—"}`,
+    `Mobile: ${b.mobile.trim() || "—"}`,
+    b.email.trim() ? `Email: ${b.email.trim()}` : null,
+    `Vehicle: ${vehicle}`,
+    `Preferred: ${b.date} · ${b.slot}`,
+    "",
+    "Services:",
+    services.length ? services.map((s) => `• ${s}`).join("\n") : "• To be confirmed",
+    b.notes.trim() ? "" : null,
+    b.notes.trim() ? `Notes: ${b.notes.trim()}` : null,
   ];
   return parts.filter((l): l is string => l !== null).join("\n");
 }
