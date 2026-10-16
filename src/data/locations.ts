@@ -70,7 +70,7 @@ export const SISTER_LOCATIONS: SisterLocation[] = [
     metaTitle:
       "Tyres & wheel alignment in New Lynn, New Windsor & Blockhouse Bay",
     metaDescription:
-      "Commuter tyres, pothole-proof 3D alignments and drive-in puncture repairs for New Lynn, New Windsor, Blockhouse Bay and Whau drivers. Call (09) 828 4180.",
+      "Commuter tyres, pothole-proof 3D alignments and drive-in puncture repairs for New Lynn, New Windsor, Blockhouse Bay and Whau drivers. Call (09)828 8341.",
   },
   {
     slug: "glendene-titirangi-tyres",
@@ -99,7 +99,7 @@ export const SISTER_LOCATIONS: SisterLocation[] = [
     metaTitle:
       "Wet-weather tyres & steering checks in Glendene, Kelston & Titirangi",
     metaDescription:
-      "High-grip wet tyres, sway bar and steering checks and free 30-point inspections for Glendene, Kelston and Titirangi foothills drivers. Call (09) 828 4180.",
+      "High-grip wet tyres, sway bar and steering checks and free 30-point inspections for Glendene, Kelston and Titirangi foothills drivers. Call (09)828 8341.",
   },
 ];
 

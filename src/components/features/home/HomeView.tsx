@@ -180,8 +180,8 @@ export default function HomeView() {
         </div>
       </div>
 
-      {/* NOTE — client to confirm before launch: content doc lists (09) 828 4180,
-          street signage reads (09)828 8341. Site standardized on (09) 828 4180. */}
+      {/* NOTE — client to confirm before launch: content doc lists (09)828 8341,
+          street signage reads (09)828 8341. Site standardized on (09)828 8341. */}
 
       <SiteFooter variant="full" />
     </>

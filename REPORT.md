@@ -711,7 +711,7 @@ const sorted = useMemo(() => {
 
 **File:** `src/data/site.ts`
 
-**Problem:** `SITE.phoneHref` contains `"tel:+9348632268"` which is an invalid phone number. The displayed number `(09) 828 4180` in the NZ format corresponds to `tel:+6498284180`. Additionally, a code comment in `HomeView.tsx` flags a discrepancy between the content document (`(09) 828 4180`) and street signage (`(09)828 8341`) — the client needs to confirm the correct number before launch.
+**Problem:** `SITE.phoneHref` contains `"tel:+9348632268"` which is an invalid phone number. The displayed number `(09)828 8341` in the NZ format corresponds to `tel:+6498284180`. Additionally, a code comment in `HomeView.tsx` flags a discrepancy between the content document (`(09)828 8341`) and street signage (`(09)828 8341`) — the client needs to confirm the correct number before launch.
 
 **Fix required:** Update `SITE.phoneHref` to `"tel:+6498284180"` (or whichever number is confirmed correct).
 
@@ -804,8 +804,8 @@ The general booking form (Step 4: contact details) has no validation before navi
 **File:** `src/components/features/home/HomeView.tsx`
 
 ```
-// NOTE — client to confirm before launch: content doc lists (09) 828 4180,
-//        street signage reads (09)828 8341. Site standardized on (09) 828 4180.
+// NOTE — client to confirm before launch: content doc lists (09)828 8341,
+//        street signage reads (09)828 8341. Site standardized on (09)828 8341.
 ```
 
 The correct business phone number needs to be confirmed with the client before launch and updated consistently across all references.

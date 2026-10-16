@@ -3,7 +3,7 @@ import { ServicesView } from "@/components/features/services";
 export const metadata = {
   title: "Tyre Fitting, 3D Laser Alignment & Suspension Services | Avondale, West Auckland",
   description:
-    "Quality tyre fitting from $89, 3D laser wheel alignment, drive-in puncture repairs, and official Central West Shock Shop steering & suspension services in Avondale, West Auckland. Call (09) 828 4180.",
+    "Quality tyre fitting from $89, 3D laser wheel alignment, drive-in puncture repairs, and official Central West Shock Shop steering & suspension services in Avondale, West Auckland. Call (09)828 8341.",
   openGraph: {
     title: "Tyre Fitting, 3D Laser Alignment & Suspension Services | Glenburn Tyres Avondale",
     description:

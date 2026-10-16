@@ -9,7 +9,7 @@ const location = getSisterLocation("new-lynn-tyres-suspension")!;
 export const metadata: Metadata = {
   title: "Tyres & Suspension — New Lynn, Blockhouse Bay & Whau",
   description:
-    "Commuter tyres, pothole-proof 3D alignments and drive-in puncture repairs for New Lynn, New Windsor, Blockhouse Bay and Whau. Call (09) 828 4180.",
+    "Commuter tyres, pothole-proof 3D alignments and drive-in puncture repairs for New Lynn, New Windsor, Blockhouse Bay and Whau. Call (09)828 8341.",
 };
 
 export default function NewLynnLocationPage() {

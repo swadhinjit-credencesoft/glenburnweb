@@ -28,7 +28,7 @@ export default function ShockShopView() {
             Central West <em>Shock Shop</em> &amp; steering specialists
           </>
         }
-        sub="Don't let a bumpy ride or bad shocks ruin your handling. Expert WoF suspension repairs, shock absorber testing, Bilstein and Tein installs, and custom 4x4 lift kits."
+        sub="Don't let a bumpy ride or bad shocks ruin your handling. Expert WoF suspension repairs, shock absorber testing and Bilstein  installs, and custom 4x4 lift kits."
       >
         <div className="hctas">
           <Link href="/book" className="btn btn-p">
