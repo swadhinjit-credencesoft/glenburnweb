@@ -80,6 +80,7 @@ export default function SiteFooter(
             >
               {SITE.address}, Avondale 0600
             </a>
+            <div className="footer-landmark">The Iconic Blue Building</div>
             {SITE.hours.map((h) => (
               <div
                 className="hourrow"

@@ -46,6 +46,15 @@ footer.site {
     }
   }
 
+  .footer-landmark {
+    font-family: var(--font-plexmono), monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--amber);
+    padding: 3px 0;
+  }
+
   .footer-phone {
     font-family: var(--font-archivo), sans-serif;
     font-size: clamp(15px, 2.5vw, 17px);
