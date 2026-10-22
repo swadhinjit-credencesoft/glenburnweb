@@ -6,7 +6,7 @@ export const SITE = {
   // WhatsApp Business number, international format without "+" — update if
   // the workshop uses a dedicated WhatsApp mobile rather than the landline.
   waNumber: "6498288341",
-  email: "info@glenburntyres.co.nz",
+  email: "glenburntyres@gmail.com",
   address: "1/61 Wolverton Street",
   addressLine2: "Avondale, Auckland 0600",
   addressHref:

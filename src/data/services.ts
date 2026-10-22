@@ -47,7 +47,7 @@ export const SERVICES: ServiceItem[] = [
       { name: "Budget Options", tier: "FROM $89" },
       { name: "Yokohama", tier: "PREMIUM", image: "/images/brands/yokohama.svg" },
       { name: "Goodyear", tier: "MID-RANGE", image: "/images/brands/goodyear.svg" },
-      { name: "Continental", tier: "PREMIUM", image: "/images/brands/continental.svg" },
+      { name: "Continental", tier: "PREMIUM", image: "/images/brands/Pirelli.png" },
     ],
     highlights: [
       { label: "Fitting Turnaround", value: "30–45 mins" },

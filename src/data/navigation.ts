@@ -22,22 +22,22 @@ export const SERVICE_NAV = [
   {
     label: "Tyre fitting & supply",
     href: "/services/tyre-fitting",
-    desc: "Fitted and balanced from $89",
+    desc: "Fitted and balanced from $129",
   },
   {
     label: "3D laser wheel alignment",
     href: "/services/wheel-alignment",
-    desc: "Camber, caster and toe — $89",
+    desc: "Camber, caster and toe — $99",
   },
   {
     label: "Puncture repairs",
     href: "/services/puncture-repair",
-    desc: "Drive-in while you wait — $35",
+    desc: "Drive-in while you wait — $47",
   },
   {
     label: "Shock shop — suspension",
     href: "/services/shock-shop",
-    desc: "Bilstein, Monroe, 4x4 lift kits",
+    desc: "Bilstein, Monroe, 4x4 lift kits — $49",
   },
 ];
 
