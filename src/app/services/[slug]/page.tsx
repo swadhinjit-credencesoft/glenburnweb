@@ -12,7 +12,8 @@ const LABELS: Record<string, string> = {
   "tyre-fitting": "Tyre Fitting & Supply",
   "wheel-alignment": "3D Laser Wheel Alignment",
   "puncture-repair": "Puncture Repairs & Safety Inspections",
-  "shock-shop": "Central West Shock Shop — Steering & Suspension",
+  "shock-shop": "Shock Specialist and Other Mechanical Repair Shop",
+  "batteries": "Car Batteries & Testing",
 };
 
 interface Props {

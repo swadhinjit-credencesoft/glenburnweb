@@ -15,15 +15,18 @@ export default function Topbar({
         <span className="topbar-left">
           {left ?? (
             <>
-              📍 {SITE.address}, Avondale
+              📍 {SITE.address}, Avondale — <strong>{SITE.landmark}</strong>
             </>
           )}
         </span>
         <span className="topbar-right mono">
           {right ?? (
-            <a href={SITE.phoneHref} className="phone-link" title={`Call Glenburn Tyres on ${SITE.phone}`}>
-              📞 <strong>{SITE.phone}</strong>
-            </a>
+            <div className="topbar-phone-unit">
+              <a href={SITE.phoneHref} className="phone-link" title={`Call Glenburn Tyres on ${SITE.phone}`}>
+                📞 <strong>{SITE.phone}</strong>
+              </a>
+              <span className="topbar-sub-loc">· {SITE.address} ({SITE.landmark})</span>
+            </div>
           )}
         </span>
       </div>

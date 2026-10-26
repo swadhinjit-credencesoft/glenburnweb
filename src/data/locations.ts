@@ -30,12 +30,12 @@ export const SISTER_LOCATIONS: SisterLocation[] = [
         body: "Minimal downtime for tradies and local transport operators working along the Rosebank industrial corridor. Drop your ute or van off in the morning at 1/61 Wolverton Street and pick it up by lunch.",
       },
       {
-        title: "Heavy-Duty Ute & 4x4 Setup",
-        body: "Heavy loads and rough job sites wear tyres and suspension quickly. We supply reinforced commercial tyres, 4x4 all-terrain and mud terrain rubber, and Shock Shop heavy-duty spring upgrades.",
+        title: "Heavy-Duty Ute & Commercial Setup",
+        body: "Heavy loads and rough job sites wear tyres and suspension quickly. We supply reinforced commercial tyres, durable all-terrain rubber, and heavy-duty spring upgrades.",
       },
       {
         title: "Find Us Easily",
-        body: "Located in the iconic Blue Building at 1/61 Wolverton Street, right between Avondale and New Lynn. Two minutes off Rosebank Road — look for the blue building.",
+        body: "Located in The Iconic Blue Building at 1/61 Wolverton Street, right between Avondale and New Lynn. Two minutes off Rosebank Road — look for the blue building.",
       },
     ],
     primaryCta: "Book a fleet slot",
@@ -70,7 +70,7 @@ export const SISTER_LOCATIONS: SisterLocation[] = [
     metaTitle:
       "Tyres & wheel alignment in New Lynn, New Windsor & Blockhouse Bay",
     metaDescription:
-      "Commuter tyres, pothole-proof 3D alignments and drive-in puncture repairs for New Lynn, New Windsor, Blockhouse Bay and Whau drivers. Call (09)828 8341.",
+      "Commuter tyres, pothole-proof 3D alignments and drive-in puncture repairs for New Lynn, New Windsor, Blockhouse Bay and Whau drivers. Call (09) 828 8341.",
   },
   {
     slug: "glendene-titirangi-tyres",
@@ -84,7 +84,7 @@ export const SISTER_LOCATIONS: SisterLocation[] = [
     services: [
       {
         title: "Winding Road Traction",
-        body: "Living out toward Titirangi and the foothills means navigating tight bends and damp roads. We specialize in wet-weather grip tyres and Shock Shop sway bar/steering checks to ensure maximum vehicle stability.",
+        body: "Living out toward Titirangi and the foothills means navigating tight bends and damp roads. We specialize in wet-weather grip tyres and specialized sway bar/steering checks to ensure maximum vehicle stability.",
       },
       {
         title: "Brake & Suspension Assurance",
@@ -99,7 +99,7 @@ export const SISTER_LOCATIONS: SisterLocation[] = [
     metaTitle:
       "Wet-weather tyres & steering checks in Glendene, Kelston & Titirangi",
     metaDescription:
-      "High-grip wet tyres, sway bar and steering checks and free 30-point inspections for Glendene, Kelston and Titirangi foothills drivers. Call (09)828 8341.",
+      "High-grip wet tyres, sway bar and steering checks and free 30-point inspections for Glendene, Kelston and Titirangi foothills drivers. Call (09) 828 8341.",
   },
 ];
 
@@ -108,8 +108,12 @@ export const LANDING_LOCATIONS = SISTER_LOCATIONS.map((l) => ({
   url: l.url,
   name: l.areas.join(", "),
   body: l.intro,
+  badge: "Workshop",
+  features: l.services.map((s) => s.title),
+  action: l.primaryCta,
 }));
 
+/** Look up a single SisterLocation by slug */
 export function getSisterLocation(slug: string): SisterLocation | undefined {
   return SISTER_LOCATIONS.find((l) => l.slug === slug);
 }

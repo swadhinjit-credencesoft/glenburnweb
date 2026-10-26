@@ -1,38 +1,23 @@
-import { SITE } from "./site";
-import { toAmPm } from "@/lib/format";
-
 export const BOOKING_SERVICES = [
   "New tyres & fitting",
   "3D laser wheel alignment",
   "Drive-in puncture repair",
-  "Central West Shock Shop — steering, suspension & brakes",
+  "Shock Specialist & mechanical repairs",
   "General tyre safety check",
-  "Battery replacement",
+  "Car batteries & testing",
 ];
 
-function toMinutes(t: string): number {
-  const [h, m] = t.split(":").map(Number);
-  return h * 60 + m;
-}
-
-// Hourly appointment slots derived from the workshop's weekday opening hours.
-function buildSlots(open: string, close: string) {
-  const noon = toMinutes("12:00");
-  const morning: string[] = [];
-  const afternoon: string[] = [];
-  for (let t = toMinutes(open); t < toMinutes(close); t += 60) {
-    const hh = String(Math.floor(t / 60)).padStart(2, "0");
-    const mm = String(t % 60).padStart(2, "0");
-    const label = toAmPm(`${hh}:${mm}`);
-    (t < noon ? morning : afternoon).push(label);
-  }
-  return { morning, afternoon };
-}
-
-const WEEKDAY = SITE.hours[0];
-
-export const BOOKING_SLOTS: Record<"morning" | "afternoon", string[]> =
-  buildSlots(WEEKDAY.open, WEEKDAY.close);
+export const BOOKING_SLOTS: Record<"morning" | "afternoon", string[]> = {
+  morning: ["7:30 AM", "8:00 AM", "9:00 AM", "10:00 AM", "11:00 AM"],
+  afternoon: [
+    "12:00 PM",
+    "1:00 PM",
+    "2:00 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "Other specific time",
+  ],
+};
 
 export interface BookingState {
   plate: string;
@@ -41,6 +26,7 @@ export interface BookingState {
   date: string;
   timeOfDay: "morning" | "afternoon";
   slot: string;
+  customTime?: string;
   fullName: string;
   mobile: string;
   email: string;
@@ -49,12 +35,13 @@ export interface BookingState {
 }
 
 export const INITIAL_BOOKING: BookingState = {
-  plate: "KLM428",
+  plate: "",
   vehicle: "",
   services: { "New tyres & fitting": true },
-  date: "Mon 11 Aug 2026",
+  date: "",
   timeOfDay: "morning",
-  slot: BOOKING_SLOTS.morning[0],
+  slot: "7:30 AM",
+  customTime: "",
   fullName: "",
   mobile: "",
   email: "",

@@ -13,7 +13,7 @@ export default function ShockShopView() {
   return (
     <>
       <BookTopbar />
-      <SiteHeader nav={MAIN_NAV} active="Shock Shop" />
+      <SiteHeader nav={MAIN_NAV} active="Shock Specialists" />
 
       <PhotoHero
         image="/images/shockshop-hero.jpg"
@@ -22,13 +22,13 @@ export default function ShockShopView() {
             "linear-gradient(100deg,rgba(22,24,26,.95) 0%,rgba(22,24,26,.88) 44%,rgba(22,24,26,.5) 78%,rgba(22,24,26,.38) 100%)",
         }}
         wrapStyle={{ paddingBottom: 52 }}
-        eyebrow="Official franchise · 16+ years"
+        eyebrow="Suspension & Mechanical Specialists · 16+ Years"
         title={
           <>
-            Central West <em>Shock Shop</em> &amp; steering specialists
+            Shock Specialist and other <em>mechanical repair shop</em>
           </>
         }
-        sub="Don't let a bumpy ride or bad shocks ruin your handling. Expert WoF suspension repairs, shock absorber testing and Bilstein  installs, and custom 4x4 lift kits."
+        sub="Don't let a bumpy ride or bad shocks ruin your handling. Expert WoF suspension repairs, shock absorber testing, Bilstein & Monroe installs, steering and underbody mechanical work."
       >
         <div className="hctas">
           <Link href="/book" className="btn btn-p">
@@ -68,7 +68,7 @@ export default function ShockShopView() {
       <div className="sec alt">
         <div className="wrap">
           <div className="sechead">
-            <h2>How a Shock Shop job runs</h2>
+            <h2>How our suspension &amp; mechanical repairs run</h2>
             <p>
               Suspension is diagnostic work. It needs a conversation before a
               quote — which is exactly what a 35-year workshop is good at, and
@@ -99,19 +99,19 @@ export default function ShockShopView() {
           </div>
           <div className="grid g2">
             <div className="val">
-              <h3>4x4 lift kits</h3>
+              <h3>Commercial ute &amp; trade suspension</h3>
               <p>
-                Custom 4WD lift kits supplied and installed for utes and wagons
-                working the Rosebank industrial corridor and heading further
-                afield. Heavy-duty spring upgrades for constant load.
+                Heavy-duty spring and damper upgrades for constant load and trade carrying.
+                Control arms, ball joints, sway bar links, and leaf spring replacements for
+                vehicles working the Rosebank industrial corridor and West Auckland.
               </p>
             </div>
             <div className="val">
-              <h3>Performance lowering springs</h3>
+              <h3>Car battery testing &amp; replacement</h3>
               <p>
-                Bilstein and Tein lowering and coilover setups, installed with
-                a precision alignment to match. Race and track alignment specs
-                available on request.
+                Comprehensive digital battery load testing, charging system diagnosis,
+                and prompt replacement with premium high-crank and start-stop (AGM/EFB)
+                batteries on-site.
               </p>
             </div>
           </div>

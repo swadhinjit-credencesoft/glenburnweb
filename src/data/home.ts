@@ -36,7 +36,7 @@ export const SERVICES: Service[] = [
     code: "ALN",
     title: "3D laser wheel alignment",
     body: "Uneven wear or pulling to one side? Precision 3D alignment makes tyres wear evenly, saves fuel and keeps the car tracking straight.",
-    price: "$99 · four wheels",
+    price: "From $99 · four wheels",
     linkLabel: "Book alignment →",
     href: "/book",
   },
@@ -44,18 +44,26 @@ export const SERVICES: Service[] = [
     code: "PNC",
     title: "Puncture repair",
     body: "Don't let a flat ruin your day. Internal plug and patch repairs done to industry standard, drive-in, usually while you wait.",
-    price: "$47 · walk-ins welcome",
+    price: "From $47 · walk-ins welcome",
     linkLabel: "Drive in →",
     href: "/book",
   },
   {
     code: "SUS",
-    title: "Central West Shock Shop",
-    body: "Official franchise for 16+ years. WoF suspension repairs, shock testing, Bilstein and Monroe installs, and custom 4x4 lift kits.",
-    price: " from $49",
-    linkLabel: "Shock Shop →",
+    title: "Shock Specialist & mechanical repairs",
+    body: "Specialized shock absorber testing, WoF suspension repairs, Bilstein and Monroe installs, steering and underbody mechanical repairs in Avondale.",
+    price: "From $49",
+    linkLabel: "Shock Specialists →",
     href: "/shock-shop",
     amber: true,
+  },
+  {
+    code: "BAT",
+    title: "Car batteries & testing",
+    body: "Comprehensive car battery health check, charging system diagnosis, and top-brand battery supply and fitting while you wait.",
+    price: "From $149 fitted",
+    linkLabel: "Book battery service →",
+    href: "/book",
   },
 ];
 
@@ -108,13 +116,14 @@ export const HERO_BADGES: { bold: string; span?: string }[] = [
   { bold: "4.8★ Google", span: "200+ reviews" },
   { bold: "35+ Years", span: "local" },
   // { bold: "MTA Assured" },
-  { bold: "Central West Shock Shop", span: "16+ yrs" },
+  { bold: "Shock Specialists", span: "16+ yrs" },
 ];
 
 export const QUICK_SERVICES = [
   "New tyres & fitting",
   "3D laser wheel alignment",
   "Drive-in puncture repair",
-  "Shock Shop — steering & suspension",
+  "Shock Specialist & mechanical repairs",
+  "Car batteries & testing",
   "Tyre safety check",
 ];

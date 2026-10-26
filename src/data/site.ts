@@ -1,7 +1,7 @@
 export const SITE = {
   name: "Glenburn Tyres",
   legalName: "Glenburn Tyre Service Ltd",
-  phone: "(09)828 8341",
+  phone: "(09) 828 8341",
   phoneHref: "tel:+6498288341",
   // WhatsApp Business number, international format without "+" — update if
   // the workshop uses a dedicated WhatsApp mobile rather than the landline.
@@ -11,18 +11,18 @@ export const SITE = {
   addressLine2: "Avondale, Auckland 0600",
   addressHref:
     "https://maps.google.com/?q=1/61+Wolverton+Street+Avondale+Auckland",
-  landmark: "the iconic blue building",
+  landmark: "The Iconic Blue Building",
   hours: [
     {
       days: "Mon–Fri",
-      time: "7:30–5:00",
+      time: "7:30 a.m. – 5:00 p.m.",
       open: "07:30",
       close: "17:00",
       closed: false,
     },
     {
       days: "Saturday",
-      time: "7:30–12:00",
+      time: "7:30 a.m. – 12:00 p.m.",
       open: "07:30",
       close: "12:00",
       closed: false,

@@ -20,6 +20,7 @@ const SERVICE_TO_OPTION: Record<string, number> = {
   "wheel-alignment": 1,
   "puncture-repair": 2,
   "shock-shop": 3,
+  "batteries": 5,
 };
 
 export default function BookingPanel({ serviceId }: { serviceId: string }) {
@@ -57,8 +58,9 @@ export default function BookingPanel({ serviceId }: { serviceId: string }) {
       | "mobile"
       | "email"
       | "notes"
+      | "customTime"
   ) => ({
-    value: booking[name],
+    value: booking[name] || "",
     onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
       dispatch(setBookingField({ field: name, value: e.target.value })),
   });
@@ -89,8 +91,8 @@ export default function BookingPanel({ serviceId }: { serviceId: string }) {
       </div>
 
       <div className="field">
-        <label>Date</label>
-        <input value={field("date").value} onChange={field("date").onChange} />
+        <label>Date (Calendar)</label>
+        <input type="date" value={field("date").value} onChange={field("date").onChange} />
       </div>
 
       <div className="field">
@@ -120,7 +122,7 @@ export default function BookingPanel({ serviceId }: { serviceId: string }) {
       </div>
 
       <div className="field">
-        <label>Pick a time</label>
+        <label>Pick a time slot</label>
         <div className="slotgrid">
           {[...BOOKING_SLOTS.morning, ...BOOKING_SLOTS.afternoon].map((t) => (
             <button
@@ -135,9 +137,33 @@ export default function BookingPanel({ serviceId }: { serviceId: string }) {
         </div>
       </div>
 
-      <div className="field">
-        <label>Vehicle – make, model &amp; year</label>
-        <input placeholder="Mazda CX-5, 2019" {...field("vehicle")} />
+      {booking.slot === "Other specific time" && (
+        <div className="field">
+          <label>Specify any other time that suits you</label>
+          <input
+            placeholder="e.g. 8:30 AM, lunch time, or drop off anytime"
+            {...field("customTime")}
+          />
+        </div>
+      )}
+
+      <div className="row2">
+        <div className="field">
+          <label>Number plate</label>
+          <input
+            placeholder="e.g. KLM428"
+            style={{
+              fontFamily: "var(--font-plexmono), monospace",
+              letterSpacing: ".1em",
+              textTransform: "uppercase",
+            }}
+            {...field("plate")}
+          />
+        </div>
+        <div className="field">
+          <label>Make, model &amp; year</label>
+          <input placeholder="Mazda CX-5, 2019" {...field("vehicle")} />
+        </div>
       </div>
 
       <div className="row2">
@@ -157,10 +183,10 @@ export default function BookingPanel({ serviceId }: { serviceId: string }) {
       </div>
 
       <div className="field">
-        <label>Notes / tyre sizes (optional)</label>
+        <label>Notes / tyre sizes</label>
         <textarea
           rows={2}
-          placeholder="e.g. 4 × 225/55 R18"
+          placeholder="e.g. 4 × 225/55 R18 or battery replacement"
           value={field("notes").value}
           onChange={field("notes").onChange}
         />

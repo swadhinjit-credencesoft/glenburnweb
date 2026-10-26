@@ -15,7 +15,8 @@ const LABELS: Record<string, string> = {
   "tyre-fitting": "Tyre Fitting & Supply",
   "wheel-alignment": "3D Laser Alignment",
   "puncture-repair": "Puncture Repairs",
-  "shock-shop": "Shock Shop & Suspension",
+  "shock-shop": "Shock Specialist & Mechanical Repairs",
+  "batteries": "Car Batteries & Testing",
 };
 
 const SVC_ICONS: Record<string, string> = {
@@ -23,6 +24,7 @@ const SVC_ICONS: Record<string, string> = {
   "wheel-alignment": "🎯",
   "puncture-repair": "🧰",
   "shock-shop": "🛠️",
+  "batteries": "🔋",
 };
 
 export default function ServiceDetailView({
@@ -41,7 +43,7 @@ export default function ServiceDetailView({
     url: `https://glenburntyres.co.nz/services/${service.id}`,
     provider: {
       "@type": "AutoRepair",
-      name: "Glenburn Tyre Service & Central West Shock Shop",
+      name: "Glenburn Tyre Service & Mechanical Specialists",
       telephone: SITE.phone,
       address: {
         "@type": "PostalAddress",
@@ -191,7 +193,7 @@ export default function ServiceDetailView({
           </div>
           <div className="service-related">
             {related.map((r) => (
-              <Link className="related-link" key={r.id} href={`/services/${r.id}`}>
+              <Link className="related-link" key={r.id} href={r.id === "batteries" ? "/book" : `/services/${r.id}`}>
                 <span className="code-badge">{r.code}</span>
                 <span className="related-title">{r.title}</span>
                 <span className="related-price">{r.price}</span>

@@ -1,6 +1,8 @@
 export const HERO_BRANDS = [
   "Bilstein",
   "Monroe",
+  "KYB",
+  "Tein",
 ];
 
 export const SIGNS = [
@@ -22,7 +24,7 @@ export const SIGNS = [
   },
   {
     title: "Failed WoF item",
-    body: "Worn bushes, leaking shocks, tie rod ends or ball joints.",
+    body: "Worn bushes, leaking shocks, tie rod ends, control arms or ball joints.",
   },
   {
     title: "Uneven tyre wear",
@@ -31,7 +33,6 @@ export const SIGNS = [
 ];
 
 export const PROCESS = [
- 
   {
     code: "01 · QUOTE",
     title: "Priced by job",
@@ -41,7 +42,7 @@ export const PROCESS = [
   {
     code: "02 · FIT & ALIGN",
     title: "Alignment included",
-    body: "Suspension work changes the geometry. Every Shock Shop job finishes on the 3D laser rig — that's not an upsell, it's the job.",
+    body: "Suspension work changes the geometry. Every suspension and shock replacement finishes on the 3D laser rig — that's not an upsell, it's the job.",
     price: "Included",
   },
 ];

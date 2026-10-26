@@ -27,11 +27,11 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Glenburn Tyres — Tyres, Alignment & Shock Shop | Avondale",
+    default: "Glenburn Tyres — Tyres, Alignment & Mechanical Repairs | Avondale",
     template: "%s | Glenburn Tyres",
   },
   description:
-    "Independent tyre, wheel and suspension specialists in Avondale since 1982. Official Central West Shock Shop franchise.",
+    "Independent tyre, wheel, steering and suspension specialists in Avondale since 1982. Shock Specialist and other mechanical repair shop.",
   icons: {
     icon: [
       { url: "/glenburnlogo.png", type: "image/svg+xml" },

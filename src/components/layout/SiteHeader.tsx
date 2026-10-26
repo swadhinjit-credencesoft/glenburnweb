@@ -70,13 +70,18 @@ export default function SiteHeader({
           </nav>
         )}
 
-        <a
-          href={SITE.phoneHref}
-          className="header-phone"
-          title={`Call Glenburn Tyres directly on ${SITE.phone}`}
-        >
-          📞 {SITE.phone}
-        </a>
+        <div className="header-contact-col">
+          <a
+            href={SITE.phoneHref}
+            className="header-phone"
+            title={`Call Glenburn Tyres directly on ${SITE.phone}`}
+          >
+            📞 {SITE.phone}
+          </a>
+          <span className="header-address-sub">
+            {SITE.address} · <span className="blue-bldg">{SITE.landmark}</span>
+          </span>
+        </div>
 
         <button
           className={`mnavbtn${open ? " on" : ""}`}
@@ -130,6 +135,9 @@ export default function SiteHeader({
               <a href={SITE.phoneHref} className="btn btn-phone btn-sm">
                 📞 Call {SITE.phone}
               </a>
+              <div style={{ fontSize: 11, color: "#95a8bc", textAlign: "center", marginTop: 4 }}>
+                📍 {SITE.address}, Avondale · {SITE.landmark}
+              </div>
               <Link href="/book" className="btn btn-p btn-sm" onClick={() => setOpen(false)}>
                 📅 Book appointment
               </Link>

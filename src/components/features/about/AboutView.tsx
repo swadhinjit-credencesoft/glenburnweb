@@ -33,7 +33,7 @@ export default function AboutView() {
             <h2>The workshop</h2>
             <p>
               Step inside and you&apos;ll find a proper four-bay workshop run by
-              people who treat every car like their own — the blue building
+              people who treat every car like their own — The Iconic Blue Building
               Avondale drivers have trusted since 1982.
             </p>
           </div>
@@ -54,14 +54,14 @@ export default function AboutView() {
                 franchise on precision.
               </p>
             </div>
-            {/* <div className="val">
-              <h3>MTA accredited</h3>
+            <div className="val">
+              <h3>Shock specialist &amp; mechanical repairs</h3>
               <p>
-                MTA Assured since day one. Every repair, every fitting and
-                every alignment is carried out to the standards the Motor Trade
-                Association stands behind.
+                16+ years of specialized shock absorber testing, WoF suspension
+                repairs, steering and underbody mechanical work — Bilstein,
+                Monroe, KYB and Tein installs.
               </p>
-            </div> */}
+            </div>
           </div>
           <p className="note" style={{ marginTop: 18 }}>
             <b>How to find us</b>
@@ -76,7 +76,7 @@ export default function AboutView() {
         <div className="wrap">
           <div className="sechead">
             <h2>
-              Get in touch with Glenburn Tyres &amp; Central West Shock Shop
+              Get in touch with Glenburn Tyres
             </h2>
             <p>
               Serving Avondale, New Lynn and West Auckland drivers for over 35
@@ -94,7 +94,7 @@ export default function AboutView() {
                 Avondale, Auckland 0600
               </p>
               <p style={{ marginTop: 10, color: "var(--blue)", fontWeight: 600 }}>
-                Look for the iconic blue building
+                {SITE.landmark}
               </p>
             </div>
             <div>
@@ -105,7 +105,7 @@ export default function AboutView() {
                 Email: {SITE.email}
               </p>
               <p style={{ marginTop: 10, color: "var(--muted)", fontSize: 13.5 }}>
-                Franchise: Central West Shock Shop
+                Shock Specialist &amp; Other Mechanical Repair Shop
               </p>
             </div>
             <div>

@@ -48,8 +48,9 @@ export default function BookingView() {
               <div className="cb">
                 <div className="row2">
                   <div className="field">
-                    <label>Licence plate (optional)</label>
+                    <label>Number plate</label>
                     <input
+                      placeholder="e.g. KLM428"
                       value={booking.plate}
                       onChange={(e) =>
                         dispatch(
@@ -67,9 +68,9 @@ export default function BookingView() {
                     />
                   </div>
                   <div className="field">
-                    <label>Or make, model &amp; year</label>
+                    <label>Make, model &amp; year</label>
                     <input
-                      placeholder="Mazda CX-5, 2019"
+                      placeholder="e.g. Mazda CX-5, 2019"
                       value={booking.vehicle}
                       onChange={(e) =>
                         dispatch(
@@ -113,8 +114,9 @@ export default function BookingView() {
               <div className="cb">
                 <div className="row2">
                   <div className="field">
-                    <label>Date</label>
+                    <label>Date (Calendar)</label>
                     <input
+                      type="date"
                       value={booking.date}
                       onChange={(e) =>
                         dispatch(
@@ -153,7 +155,7 @@ export default function BookingView() {
                   </div>
                 </div>
                 <div className="field">
-                  <label>Pick a time</label>
+                  <label>Pick a time slot</label>
                   <div className="slotgrid">
                     {[...BOOKING_SLOTS.morning, ...BOOKING_SLOTS.afternoon].map(
                       (t) => (
@@ -169,7 +171,24 @@ export default function BookingView() {
                     )}
                   </div>
                 </div>
-                <p style={{ fontSize: 12.5, color: "var(--muted)" }}>
+                {booking.slot === "Other specific time" && (
+                  <div className="field" style={{ marginTop: 12 }}>
+                    <label>Specify any other time that suits you</label>
+                    <input
+                      placeholder="e.g. 8:30 AM, lunch time, or anytime after 2pm"
+                      value={booking.customTime || ""}
+                      onChange={(e) =>
+                        dispatch(
+                          setBookingField({
+                            field: "customTime",
+                            value: e.target.value,
+                          })
+                        )
+                      }
+                    />
+                  </div>
+                )}
+                <p style={{ fontSize: 12.5, color: "var(--muted)", marginTop: 8 }}>
                   Saturday mornings only, {toAmPm(sat.open)} –{" "}
                   {toAmPm(sat.close)}. Closed Sunday and public holidays.
                 </p>
@@ -229,7 +248,7 @@ export default function BookingView() {
                   <label>Notes / tyre sizes</label>
                   <textarea
                     rows={3}
-                    placeholder="e.g. Looking for 4 SUV tyres for a Mazda CX-5"
+                    placeholder="e.g. Looking for 4 SUV tyres for a Mazda CX-5, or battery test"
                     value={booking.notes}
                     onChange={(e) =>
                       dispatch(
@@ -262,13 +281,6 @@ export default function BookingView() {
                 <div className="mt">During workshop hours</div>
               </div>
             </div>
-            {/* <div className="sitem">
-              <div className="ti" style={{ background: "var(--blue)" }} />
-              <div>
-                <div className="nm">MTA assured</div>
-                <div className="mt">Accredited workshop</div>
-              </div>
-            </div> */}
             <div className="sitem">
               <div className="ti" style={{ background: "var(--green)" }} />
               <div>
@@ -292,8 +304,8 @@ export default function BookingView() {
                     `${h.days} ${toAmPm(h.open)} – ${toAmPm(h.close)}`
                 )
                 .join(" and ")}
-              . Walk-ins are always welcome for puncture repairs and tyre
-              checks.
+              . Walk-ins are always welcome for puncture repairs, battery checks and tyre
+              safety inspections.
             </div>
             <div className="sfoot">
               <button

@@ -25,7 +25,7 @@ export default function ContactView() {
 
       <PageHead
         crumb="Home / Contact"
-        title="Get in touch with Glenburn Tyres & Central West Shock Shop"
+        title="Get in touch with Glenburn Tyres"
       >
         Serving Avondale, New Lynn, and West Auckland drivers for over 35 years. Pop in, call us, or send us a message below.
       </PageHead>
@@ -41,7 +41,7 @@ export default function ContactView() {
                 Avondale, Auckland 0600
               </p>
               <p style={{ marginTop: 10, color: "var(--blue)", fontWeight: 600 }}>
-                Look for the iconic blue building!
+                {SITE.landmark}
               </p>
             </div>
             <div>
@@ -51,7 +51,7 @@ export default function ContactView() {
                 Email: <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
               </p>
               <p style={{ marginTop: 10, color: "var(--muted)", fontSize: 13.5 }}>
-                Franchise: Central West Shock Shop
+                Shock Specialist &amp; Other Mechanical Repair Shop
               </p>
             </div>
             <div>
@@ -90,61 +90,6 @@ export default function ContactView() {
               📍 Get Directions
             </a>
           </div>
-
-          {/* <div className="msgform" style={{ marginTop: 34 }}>
-            <h3>Send us a message</h3>
-            {sent ? (
-              <p className="note" style={{ marginTop: 12 }}>
-                Thanks {form.name || "there"} — your message has been received.
-                We&apos;ll get back to you within one working day. If it&apos;s
-                urgent, call the workshop on {SITE.phone}.
-              </p>
-            ) : (
-              <div className="grid g2" style={{ marginTop: 12 }}>
-                <div className="fld">
-                  <label>Your name</label>
-                  <input value={form.name} onChange={update("name")} />
-                </div>
-                <div className="fld">
-                  <label>Email</label>
-                  <input
-                    type="email"
-                    value={form.email}
-                    onChange={update("email")}
-                  />
-                </div>
-                <div className="fld">
-                  <label>Phone</label>
-                  <input
-                    value={form.phone}
-                    onChange={update("phone")}
-                    placeholder="Optional"
-                  />
-                </div>
-                <div className="fld">
-                  <label>&nbsp;</label>
-                </div>
-                <div className="fld" style={{ gridColumn: "1 / -1" }}>
-                  <label>Message</label>
-                  <textarea
-                    rows={4}
-                    value={form.msg}
-                    onChange={update("msg")}
-                    placeholder="e.g. Looking to book a wheel alignment next week."
-                  />
-                </div>
-                <div className="fld" style={{ gridColumn: "1 / -1" }}>
-                  <button
-                    className="btn btn-p"
-                    onClick={() => setSent(true)}
-                    disabled={!form.name || !form.msg}
-                  >
-                    Send message →
-                  </button>
-                </div>
-              </div>
-            )}
-          </div> */}
         </div>
       </div>
 

@@ -54,6 +54,23 @@
     }
   }
 
+  .topbar-phone-unit {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .topbar-sub-loc {
+    font-size: 11px;
+    color: #9eb2c5;
+    font-weight: 500;
+
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+
   .phone-link {
     color: var(--amber);
     font-weight: 800;

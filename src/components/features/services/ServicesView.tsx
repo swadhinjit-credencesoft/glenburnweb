@@ -14,7 +14,8 @@ const LABELS: Record<string, string> = {
   "tyre-fitting": "Tyre Fitting & Supply",
   "wheel-alignment": "3D Laser Alignment",
   "puncture-repair": "Puncture Repairs",
-  "shock-shop": "Shock Shop & Suspension",
+  "shock-shop": "Shock Specialist & Repairs",
+  "batteries": "Car Batteries & Testing",
 };
 
 const HUB_ICONS: Record<string, string> = {
@@ -22,13 +23,14 @@ const HUB_ICONS: Record<string, string> = {
   "wheel-alignment": "🎯",
   "puncture-repair": "🧰",
   "shock-shop": "🛠️",
+  "batteries": "🔋",
 };
 
 export default function ServicesView() {
   const servicesSchema = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
-    name: "Glenburn Tyre Service & Central West Shock Shop",
+    name: "Glenburn Tyre Service & Mechanical Specialists",
     url: "https://glenburntyres.co.nz/services",
     telephone: SITE.phone,
     address: {
@@ -40,7 +42,7 @@ export default function ServicesView() {
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Tyre, Alignment & Suspension Services",
+      name: "Tyre, Alignment, Battery & Suspension Services",
       itemListElement: SERVICES.map((s, index) => ({
         "@type": "Offer",
         itemOffered: {
@@ -70,8 +72,8 @@ export default function ServicesView() {
         title="Specialist Workshop Services in Avondale"
       >
         Independent tyre supply and fitting, high-precision 3D laser wheel
-        alignment, express puncture repairs, and official Central West Shock
-        Shop steering &amp; suspension.
+        alignment, express puncture repairs, car battery testing, and trusted
+        shock specialist and mechanical repair shop.
       </PageHead>
 
       <section className="sec">
@@ -80,7 +82,7 @@ export default function ServicesView() {
             {SERVICES.map((s) => (
               <Link
                 key={s.id}
-                href={`/services/${s.id}`}
+                href={s.id === "batteries" ? "/book" : `/services/${s.id}`}
                 className={`service-hub-card${s.amber ? " amber" : ""}`}
               >
                 <div className="hub-meta">

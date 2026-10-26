@@ -11,7 +11,7 @@ export const PROTO_TABS: ProtoTab[] = [
   },
   { id: "checkout", num: "04", label: "Checkout", href: "/checkout" },
   { id: "conf", num: "05", label: "Confirmation", href: "/confirmation" },
-  { id: "shock", num: "06", label: "Shock Shop", href: "/shock-shop" },
+  { id: "shock", num: "06", label: "Shock Specialists", href: "/shock-shop" },
   { id: "local", num: "07", label: "Local landing", href: "/locations/avondale-rosebank-tyres" },
   { id: "faq", num: "08", label: "FAQ hub", href: "/faqs" },
   { id: "book", num: "09", label: "Book / Quote", href: "/book" },
@@ -27,23 +27,28 @@ export const SERVICE_NAV = [
   {
     label: "3D laser wheel alignment",
     href: "/services/wheel-alignment",
-    desc: "Camber, caster and toe — $99",
+    desc: "Camber, caster and toe — from $89",
   },
   {
     label: "Puncture repairs",
     href: "/services/puncture-repair",
-    desc: "Drive-in while you wait — $47",
+    desc: "Drive-in while you wait — from $35",
   },
   {
-    label: "Shock shop — suspension",
+    label: "Shock Specialist & mechanical repairs",
     href: "/services/shock-shop",
-    desc: "Bilstein, Monroe, 4x4 lift kits — $49",
+    desc: "Bilstein, Monroe, suspension & WoF — from $49",
+  },
+  {
+    label: "Car batteries & testing",
+    href: "/book",
+    desc: "Digital test & fitting from $149",
   },
 ];
 
 export const MAIN_NAV: NavItem[] = [
   { label: "Services", href: "/services", children: SERVICE_NAV },
-  { label: "Shock Shop", href: "/shock-shop" },
+  { label: "Shock Specialists", href: "/shock-shop" },
   { label: "Areas", href: "/locations" },
   { label: "About", href: "/about" },
   { label: "FAQs", href: "/faqs" },

@@ -36,18 +36,18 @@ export default function LocalLandingView() {
               </p>
             </div>
             <div className="val">
-              <h3>Heavy-Duty Ute &amp; 4x4 Setup</h3>
+              <h3>Heavy-Duty Ute &amp; Commercial Setup</h3>
               <p>
                 Heavy loads and rough job sites wear tyres and suspension
-                quickly. We supply reinforced commercial tyres, 4x4 all-terrain
-                and mud terrain rubber, and Shock Shop heavy-duty spring
-                upgrades.
+                quickly. We supply reinforced commercial tyres, durable
+                all-terrain and mud terrain rubber, and heavy-duty spring
+                upgrades for constant load.
               </p>
             </div>
             <div className="val">
               <h3>Find Us Easily</h3>
               <p>
-                Located in the iconic Blue Building at 1/61 Wolverton Street,
+                Located in The Iconic Blue Building at 1/61 Wolverton Street,
                 right between Avondale and New Lynn. Two minutes off Rosebank
                 Road — look for the blue building.
               </p>

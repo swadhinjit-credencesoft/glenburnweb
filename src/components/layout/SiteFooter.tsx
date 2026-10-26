@@ -9,11 +9,13 @@ export default function SiteFooter(
       <div className="wrap">
         <div className="cols">
           <div>
-            <div
+            <Link
+              href="/"
+              title="Glenburn Tyres — Home"
               className="lockup"
               style={{
                 marginBottom: 13,
-                display: "flex",
+                display: "inline-flex",
                 alignItems: "center",
                 gap: 8,
               }}
@@ -31,10 +33,10 @@ export default function SiteFooter(
                   display: "block",
                 }}
               />
-            </div>
+            </Link>
             <p style={{ fontSize: 13, fontWeight: 300, maxWidth: "34ch" }}>
-              Independent tyre, wheel and suspension specialists in Avondale
-              since 1982. Official Central West Shock Shop franchise.
+              Independent tyre, wheel, steering and suspension specialists in Avondale
+              since 1982. Shock Specialist and other mechanical repair shop.
             </p>
           </div>
           <div>
@@ -42,8 +44,8 @@ export default function SiteFooter(
             <Link href="/services/tyre-fitting">Tyre fitting &amp; supply</Link>
             <Link href="/book">3D laser wheel alignment</Link>
             <Link href="/book">Puncture repair</Link>
-            <Link href="/shock-shop">Central West Shock Shop</Link>
-            <Link href="/shock-shop">4x4 lift kits</Link>
+            <Link href="/shock-shop">Shock Specialist &amp; mechanical repairs</Link>
+            <Link href="/book">Car batteries &amp; testing</Link>
           </div>
           <div>
             <h4>Areas served</h4>

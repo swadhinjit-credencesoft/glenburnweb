@@ -91,7 +91,7 @@ export const SERVICES: ServiceItem[] = [
     brands: [],
     highlights: [
       { label: "Technology", value: "3D High-Def Laser Sensors" },
-      { label: "Standard Price", value: "$89 for four wheels" },
+      { label: "Standard Price", value: "From $89 for four wheels" },
       { label: "Recommended", value: "Every 10,000 km or new tyres" },
     ],
     expertSections: [
@@ -111,7 +111,7 @@ export const SERVICES: ServiceItem[] = [
           "Properly aligned wheels reduce rolling resistance, which directly lowers fuel consumption. It also prevents uneven load distribution on shock absorbers, ball joints, control arm bushes, and wheel bearings, keeping your vehicle's entire steering and suspension geometry healthy.",
       },
     ],
-    price: "$89 for four wheels",
+    price: "From $89 for four wheels",
     href: "/book",
     cta: "Book 3D Alignment",
   },
@@ -130,7 +130,7 @@ export const SERVICES: ServiceItem[] = [
     brands: [],
     highlights: [
       { label: "Turnaround Time", value: "15–20 minutes" },
-      { label: "Standard Price", value: "$35 (Walk-ins welcome)" },
+      { label: "Standard Price", value: "From $35 (Walk-ins welcome)" },
       { label: "Repair Standard", value: "NZTA Compliant" },
     ],
     expertSections: [
@@ -150,40 +150,40 @@ export const SERVICES: ServiceItem[] = [
           "Got a slow leak or waking up to a flat tyre? Drop straight into our workshop at 1/61 Wolverton Street, Avondale. In most cases, our technicians will have your puncture assessed, repaired, pressure-tested in our immersion tank, and refitted within 15 to 20 minutes.",
       },
     ],
-    price: "$35 — walk-ins welcome",
+    price: "From $35 — walk-ins welcome",
     href: "/book",
     cta: "Drive in / Book Repair",
   },
   {
     id: "shock-shop",
     code: "SUS",
-    eyebrow: "Service 04 · Central West Shock Shop",
-    title: "Official Central West Shock Shop in Avondale",
-    body: "Don't let a bumpy ride or bad shocks ruin your handling. As the official Central West Shock Shop franchise for 16+ years, we provide expert WoF suspension repairs, Bilstein/Monroe installs, and custom 4x4 lift kits to keep your vehicle riding smooth and safe.",
+    eyebrow: "Service 04 · Shock Specialist & Mechanical Repairs",
+    title: "Shock Specialist and Other Mechanical Repair Shop in Avondale",
+    body: "Don't let a bumpy ride or bad shocks ruin your handling. As Avondale's trusted shock specialist and mechanical repair shop for 16+ years, we provide expert WoF suspension repairs, Bilstein and Monroe installs, steering and underbody maintenance to keep your vehicle riding smooth and safe.",
     whatsIncluded: [
-      "Official Shock Shop electronic suspension tester evaluation",
+      "Electronic suspension tester & damper safety evaluation",
       "Warrant of Fitness (WoF) steering & suspension failure repairs",
       "Shock absorber, strut, coil spring & bushing replacements",
-      "Custom 4x4 lift kits, heavy-duty ute suspension & leveling packages",
-      "Free no-obligation suspension safety inspection",
+      "Heavy-duty trade ute & commercial suspension maintenance",
+      "Free no-obligation underbody suspension safety inspection",
     ],
     brands: [
       { name: "Bilstein", tier: "GERMAN PERFORMANCE" },
       { name: "Monroe", tier: "OE REPLACEMENT" },
       { name: "Tein", tier: "ADJUSTABLE COILOVERS" },
       { name: "KYB", tier: "JAPANESE OE SPEC" },
-      { name: "King Springs", tier: "HEAVY DUTY & 4WD" },
+      { name: "King Springs", tier: "HEAVY DUTY REPLACEMENTS" },
     ],
     highlights: [
-      { label: "Franchise History", value: "Official Shock Shop 16+ yrs" },
+      { label: "Workshop History", value: "Suspension Specialists 16+ yrs" },
       { label: "Initial Check", value: "Free suspension inspection" },
       { label: "Brands Installed", value: "Bilstein, Monroe, Tein, KYB" },
     ],
     expertSections: [
       {
-        title: "16+ Years as the Official Central West Shock Shop",
+        title: "16+ Years as Avondale's Suspension Specialists",
         content:
-          "As the authorized Central West Shock Shop franchise for over 16 years, Glenburn Tyres has specialized suspension diagnostics, spring compressors, and direct access to New Zealand's premier steering and shock absorber supply networks. We diagnose squeaks, knocks, and wallowing handling with absolute accuracy.",
+          "As an experienced shock specialist and mechanical repair shop for over 16 years, Glenburn Tyres has specialized suspension diagnostics, spring compressors, and direct access to New Zealand's premier steering, brake and shock absorber supply networks. We diagnose squeaks, knocks, and wallowing handling with absolute accuracy.",
       },
       {
         title: "Failed Your WoF on Suspension? We Provide Same-Day Repairs",
@@ -191,15 +191,49 @@ export const SERVICES: ServiceItem[] = [
           "Worn control arm bushes, leaking shock absorbers, torn steering rack boots, or loose ball joints are common reasons vehicles fail their Warrant of Fitness. We supply OEM-equivalent or upgraded replacement components, install them in our workshop, and provide full alignment so your car passes re-inspection without delay.",
       },
       {
-        title: "4WD Lift Kits & Trade Vehicle Heavy-Duty Upgrades",
+        title: "Trade Vehicle & Commercial Heavy-Duty Upgrades",
         content:
-          "Carrying heavy tools, carrying canopy setups, or hitting off-road trails in West Auckland? We install premium suspension upgrades for Ford Ranger, Toyota Hilux, Isuzu D-Max, Nissan Navara, and Mitsubishi Triton. From 2-inch lift kits to heavy-duty rear leaf springs, we ensure optimal ground clearance, load stability, and ride comfort.",
+          "Carrying heavy tools, carrying canopy setups, or working around West Auckland job sites? We install premium suspension upgrades for Ford Ranger, Toyota Hilux, Isuzu D-Max, Nissan Navara, and Mitsubishi Triton, including heavy-duty rear leaf springs to ensure optimal load stability and ride comfort.",
       },
     ],
-    price: "inspection",
+    price: "Free check · Repairs from $49",
     href: "/shock-shop",
-    cta: "Shock Shop Details",
+    cta: "Suspension Details",
     amber: true,
+  },
+  {
+    id: "batteries",
+    code: "BAT",
+    eyebrow: "Service 05 · Power & Diagnostics",
+    title: "Car Batteries & Battery Health Testing in Avondale",
+    body: "Car won't start or slow to turn over? We provide rapid digital battery testing, alternator charging checks, and on-site replacement with premium high-crank and stop-start batteries.",
+    whatsIncluded: [
+      "Digital computerized battery state-of-health & charge test",
+      "Alternator output, charging voltage, and parasitic drain check",
+      "Terminal corrosion cleaning, anti-corrosion protection & firm terminal clamp fitting",
+      "Eco-friendly old battery disposal and recycling",
+    ],
+    brands: [],
+    highlights: [
+      { label: "Testing Time", value: "Under 5 minutes (Free)" },
+      { label: "Battery Types", value: "Standard, EFB, AGM (Stop-Start)" },
+      { label: "Warranty", value: "Up to 3-Year Nationwide Warranty" },
+    ],
+    expertSections: [
+      {
+        title: "Signs Your Car Battery Is Nearing Failure",
+        content:
+          "Car batteries typically last between 3 and 5 years in New Zealand driving conditions. Warning signs include a sluggish crank when starting in the morning, clicking noises when turning the key, dimming headlights at idle, or an illuminated battery warning light on your dashboard.",
+      },
+      {
+        title: "Stop-Start & Modern Vehicle Battery Requirements",
+        content:
+          "Modern vehicles equipped with idle stop-start technology require specialized Enhanced Flooded Batteries (EFB) or Absorbent Glass Mat (AGM) batteries. Installing an incorrect standard battery will lead to premature failure and electronic errors. We stock and fit the exact battery specifications required for your vehicle.",
+      },
+    ],
+    price: "Free test · Batteries from $149 fitted",
+    href: "/book",
+    cta: "Book Battery Check",
   },
 ];
 
