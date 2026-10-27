@@ -82,7 +82,7 @@ export default function ServicesView() {
             {SERVICES.map((s) => (
               <Link
                 key={s.id}
-                href={s.id === "batteries" ? "/book" : `/services/${s.id}`}
+                href={`/services/${s.id}`}
                 className={`service-hub-card${s.amber ? " amber" : ""}`}
               >
                 <div className="hub-meta">

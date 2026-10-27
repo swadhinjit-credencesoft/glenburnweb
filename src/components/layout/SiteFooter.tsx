@@ -42,10 +42,10 @@ export default function SiteFooter(
           <div>
             <h4>Services</h4>
             <Link href="/services/tyre-fitting">Tyre fitting &amp; supply</Link>
-            <Link href="/book">3D laser wheel alignment</Link>
-            <Link href="/book">Puncture repair</Link>
+            <Link href="/services/wheel-alignment">3D laser wheel alignment</Link>
+            <Link href="/services/puncture-repair">Puncture repair</Link>
             <Link href="/shock-shop">Shock Specialist &amp; mechanical repairs</Link>
-            <Link href="/book">Car batteries &amp; testing</Link>
+            <Link href="/services/batteries">Car batteries &amp; testing</Link>
           </div>
           <div>
             <h4>Areas served</h4>

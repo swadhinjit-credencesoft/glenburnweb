@@ -41,7 +41,7 @@ export const SERVICE_NAV = [
   },
   {
     label: "Car batteries & testing",
-    href: "/book",
+    href: "/services/batteries",
     desc: "Digital test & fitting from $149",
   },
 ];

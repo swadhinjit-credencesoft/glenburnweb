@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { BookTopbar } from "@/components/layout/Topbar";
 import SiteHeader from "@/components/layout/SiteHeader";
 import SiteFooter from "@/components/layout/SiteFooter";
@@ -26,6 +27,42 @@ const SVC_ICONS: Record<string, string> = {
   "shock-shop": "🛠️",
   "batteries": "🔋",
 };
+
+/** Collapsible accordion card — click anywhere on the card to expand/collapse */
+function ExpertCard({
+  title,
+  content,
+  amber,
+  defaultOpen = false,
+}: {
+  title: string;
+  content: string;
+  amber?: boolean;
+  defaultOpen?: boolean;
+}) {
+  const [open, setOpen] = useState(defaultOpen);
+
+  return (
+    <button
+      type="button"
+      className={`expert-card expert-accordion${amber ? " amber" : ""}${open ? " is-open" : ""}`}
+      aria-expanded={open}
+      onClick={() => setOpen((o) => !o)}
+    >
+      <div className="expert-accordion-header">
+        <h4>{title}</h4>
+        <span className="expert-accordion-chevron" aria-hidden="true">
+          {open ? "−" : "+"}
+        </span>
+      </div>
+      {open && (
+        <div className="expert-accordion-body">
+          <p>{content}</p>
+        </div>
+      )}
+    </button>
+  );
+}
 
 export default function ServiceDetailView({
   service,
@@ -155,22 +192,24 @@ export default function ServiceDetailView({
                 </div>
               </div>
 
-              <div className="service-panel">
-                <h3>
-                  <span>💡</span> Expert Guide &amp; Technical Insights
-                </h3>
-                <div className="expert-insights-block">
-                  {service.expertSections.map((sec) => (
-                    <div
-                      className={`expert-card ${service.amber ? "amber" : ""}`}
-                      key={sec.title}
-                    >
-                      <h4>{sec.title}</h4>
-                      <p>{sec.content}</p>
-                    </div>
-                  ))}
+              {service.expertSections && service.expertSections.length > 0 && (
+                <div className="service-panel">
+                  <h3>
+                    <span>💡</span> Expert Guide &amp; Technical Insights
+                  </h3>
+                  <div className="expert-insights-block">
+                    {service.expertSections.map((sec, idx) => (
+                      <ExpertCard
+                        key={sec.title}
+                        title={sec.title}
+                        content={sec.content}
+                        amber={service.amber}
+                        defaultOpen={idx === 0}
+                      />
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
 
               <section className="service-booking-section">
                 <div className="service-booking">
@@ -193,7 +232,7 @@ export default function ServiceDetailView({
           </div>
           <div className="service-related">
             {related.map((r) => (
-              <Link className="related-link" key={r.id} href={r.id === "batteries" ? "/book" : `/services/${r.id}`}>
+              <Link className="related-link" key={r.id} href={`/services/${r.id}`}>
                 <span className="code-badge">{r.code}</span>
                 <span className="related-title">{r.title}</span>
                 <span className="related-price">{r.price}</span>
@@ -240,7 +279,7 @@ export default function ServiceDetailView({
               rel="noopener noreferrer"
               className="btn btn-s"
             >
-              🗺️ Get Directions to Avondale
+              📍 Get Directions to Avondale
             </a>
           </div>
         </div>

@@ -62,8 +62,8 @@ export const SERVICES: Service[] = [
     title: "Car batteries & testing",
     body: "Comprehensive car battery health check, charging system diagnosis, and top-brand battery supply and fitting while you wait.",
     price: "From $149 fitted",
-    linkLabel: "Book battery service →",
-    href: "/book",
+    linkLabel: "Battery service details →",
+    href: "/services/batteries",
   },
 ];
 

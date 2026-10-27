@@ -208,30 +208,48 @@ export const SERVICES: ServiceItem[] = [
     title: "Car Batteries & Battery Health Testing in Avondale",
     body: "Car won't start or slow to turn over? We provide rapid digital battery testing, alternator charging checks, and on-site replacement with premium high-crank and stop-start batteries.",
     whatsIncluded: [
-      "Digital computerized battery state-of-health & charge test",
-      "Alternator output, charging voltage, and parasitic drain check",
-      "Terminal corrosion cleaning, anti-corrosion protection & firm terminal clamp fitting",
-      "Eco-friendly old battery disposal and recycling",
+      "Digital computerized battery state-of-health, cold cranking amps (CCA) & reserve capacity test",
+      "Alternator charging voltage, starter motor draw & parasitic electrical drain check",
+      "Terminal post cleaning, corrosion neutralisation & anti-corrosion sealant application",
+      "Secure bracket mounting & vehicle battery management system (BMS) reset if required",
+      "Eco-friendly old battery disposal & certified lead-acid recycling",
     ],
-    brands: [],
+    brands: [
+      { name: "Century Batteries", tier: "NZ & AUS #1 BRAND" },
+      { name: "Supercharge", tier: "EXTREME CRANKING" },
+      { name: "Exide", tier: "OEM SPEC" },
+      { name: "Bosch", tier: "PREMIUM GERMAN" },
+      { name: "AGM / EFB Stop-Start", tier: "EUROPEAN & HYBRID" },
+    ],
     highlights: [
-      { label: "Testing Time", value: "Under 5 minutes (Free)" },
-      { label: "Battery Types", value: "Standard, EFB, AGM (Stop-Start)" },
-      { label: "Warranty", value: "Up to 3-Year Nationwide Warranty" },
+      
+      { label: "Battery Types", value: "Standard Lead-Acid, EFB, AGM & Stop-Start" },
+      { label: "Starting Price", value: "From $149 fully fitted & tested" },
+      { label: "Warranty", value: "Up to 36-Month Nationwide Replacement Warranty" },
     ],
     expertSections: [
       {
         title: "Signs Your Car Battery Is Nearing Failure",
         content:
-          "Car batteries typically last between 3 and 5 years in New Zealand driving conditions. Warning signs include a sluggish crank when starting in the morning, clicking noises when turning the key, dimming headlights at idle, or an illuminated battery warning light on your dashboard.",
+          "Car batteries typically last between 3 and 5 years in New Zealand driving conditions. Warning signs include a sluggish or slow engine crank on cold mornings, clicking noises when turning the ignition key, dashboard battery warning lights, dimming headlights at idle, or electrical glitches with windows and central locking. If your battery is over 3 years old, we recommend a quick complimentary health check before winter.",
       },
       {
-        title: "Stop-Start & Modern Vehicle Battery Requirements",
+        title: "Stop-Start, EFB & AGM Battery Technology Explained",
         content:
-          "Modern vehicles equipped with idle stop-start technology require specialized Enhanced Flooded Batteries (EFB) or Absorbent Glass Mat (AGM) batteries. Installing an incorrect standard battery will lead to premature failure and electronic errors. We stock and fit the exact battery specifications required for your vehicle.",
+          "Modern vehicles equipped with idle stop-start systems, regenerative braking, or complex onboard computer networks require specialized Enhanced Flooded Batteries (EFB) or Absorbent Glass Mat (AGM) power cells. Installing a standard conventional battery into a stop-start vehicle causes rapid battery deterioration within months and often trips electronic warning lights. At Glenburn Tyres, we match the exact OEM chemistry, CCA rating, and DIN/JIS case sizing your vehicle manufacturer requires.",
+      },
+      {
+        title: "Alternator Output & Charging System Diagnostics",
+        content:
+          "A flat battery isn't always a faulty battery. Often an under-charging alternator fails to keep the battery replenished, or an over-charging voltage regulator boils off electrolyte and causes premature failure. Every battery replacement at our Wolverton Street workshop includes a live charging circuit test under load to verify that your alternator, belt tension, and starter motor are in peak working condition.",
+      },
+      {
+        title: "Drive-In Battery Testing — No Booking Needed",
+        content:
+          "Car struggling to start? Drop straight into our workshop at 1/61 Wolverton Street, Avondale (The Iconic Blue Building). Our technicians will perform a fast, free computerized battery health analysis on the spot. If a new battery is needed, we stock all popular sizes and fit them while you wait, including memory saver connection to protect your vehicle's radio and ECU settings.",
       },
     ],
-    price: "Free test · Batteries from $149 fitted",
+    price: "Free check · From $149 fitted",
     href: "/book",
     cta: "Book Battery Check",
   },
